@@ -40,8 +40,8 @@ re
     * [x] rightsIdentifier="CC BY 4.0 " standardmäßig einfügen
     * [x] Rights URI: https://creativecommons.org/licenses/by/4.0/legalcode
     * Felder im datafield tag="540" subfield code="f" subfield code="u" (hat leider eine andere URL)
-* [x] ``<sizes> <size>4 kB </size> </sizes>
-    * [x] befüllen mit ''<datafield tag="300" ind1=" " ind2=" "> <subfield code="a">1 Online-Ressource (22 Seiten) </subfield> </datafield>
+* [x] ``<sizes> <size>4 kB </size> </sizes> ``
+    * [x] befüllen mit ``<datafield tag="300" ind1=" " ind2=" "> <subfield code="a">1 Online-Ressource (22 Seiten) </subfield> </datafield>``
     * [x] NB! nur die Seitenzahl (22) + "pages" anhängen
 * fundingReferences> fundingReference>
       funderName>National Science Foundation /funderName>
