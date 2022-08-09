@@ -32,17 +32,17 @@ re
                 * [x] NB! subfielder mit "," getrennt
             * Bei ZS: 773 0 9 $t $g NB! $t und $g mit "," getrennt
                 * z.B. AC16411195
-* [] `` <alternateIdentifiers> <alternateIdentifier alternateIdentifierType="URL"> </alternateIdentifier>  </alternateIdentifiers> ``
-    * befüllen mit URN
-    * alternateIdentifierType="URN"
-    * NB! Identifiers nur mit DOI
-* rightsList> rights xml:lang="en-US" schemeURI="https://spdx.org/licenses/" rightsIdentifierScheme="SPDX" rightsIdentifier="CC0 1.0" rightsURI="https://creativecommons.org/publicdomain/zero/1.0/" /> /rightsList>
-    * rightsIdentifier="CC BY 4.0 " standardmäßig einfügen
-    * Rights URI: https://creativecommons.org/licenses/by/4.0/legalcode
+* [x] `` <alternateIdentifiers> <alternateIdentifier alternateIdentifierType="URL"> </alternateIdentifier>  </alternateIdentifiers> ``
+    * [x] befüllen mit URN
+    * [x] alternateIdentifierType="URN"
+    * [x] NB! Identifiers nur mit DOI
+* [] ``<rightsList> <rights xml:lang="en-US" schemeURI="https://spdx.org/licenses/" rightsIdentifierScheme="SPDX" rightsIdentifier="CC0 1.0" rightsURI="https://creativecommons.org/publicdomain/zero/1.0/" /> </rightsList>``
+    * [x] rightsIdentifier="CC BY 4.0 " standardmäßig einfügen
+    * [x] Rights URI: https://creativecommons.org/licenses/by/4.0/legalcode
     * Felder im datafield tag="540" subfield code="f" subfield code="u" (hat leider eine andere URL)
-* sizes> size>4 kB /size> /sizes>
-    * befüllen mit datafield tag="300" ind1=" " ind2=" "> subfield code="a">1 Online-Ressource (22 Seiten) /subfield> /datafield>
-    * NB! nur die Seitenzahl (22) + "pages" anhängen
+* [x] ``<sizes> <size>4 kB </size> </sizes>
+    * [x] befüllen mit ''<datafield tag="300" ind1=" " ind2=" "> <subfield code="a">1 Online-Ressource (22 Seiten) </subfield> </datafield>
+    * [x] NB! nur die Seitenzahl (22) + "pages" anhängen
 * fundingReferences> fundingReference>
       funderName>National Science Foundation /funderName>
       funderIdentifier funderIdentifierType="Crossref Funder ID">https://doi.org/10.13039/100000001 /funderIdentifier>
