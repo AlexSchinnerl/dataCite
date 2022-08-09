@@ -1,6 +1,8 @@
 <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-4 https://schema.datacite.org/meta/kernel-4.4/metadata.xsd">
-    <identifier identifierType="doi">10.35011/risc.22-04</identifier>
-    <identifier identifierType="urn">urn:nbn:at:at-ubl:3-12218</identifier>
+    <identifier identifierType="DOI">10.35011/risc.22-04</identifier>
+    <alternateIdentifiers>
+        <alternateIdentifier alternateIdentifierType="urn">urn:nbn:at:at-ubl:3-12218</alternateIdentifier>
+    </alternateIdentifiers>
     <creators>
         <creator>
             <creatorName nameType="Personal">Kutsia, Temur</creatorName>
@@ -42,4 +44,8 @@
     <formats>
         <format>PDF</format>
     </formats>
+    <descriptions>
+        <description descriptionType="Abstract">eng: Anti-unification aims at computing generalizations for given terms, retaining their common structure and abstracting differences by variables. We study quantitative anti-unification where the notion of the common structure is relaxed into &amp;quot;proximal&amp;#039;&amp;#039; up to the given degree with respect to the given fuzzy proximity relation. Proximal symbols may have different names and arities. We develop a generic set of rules for computing minimal complete sets of approximate generalizations and study their properties. Depending on the characterizations of proximities between symbols and the desired forms of solutions, these rules give rise to different versions of concrete algorithms.</description>
+        <description descriptionType="SeriesInformation">RISC Report Series, 22-04</description>
+    </descriptions>
 </resource>
