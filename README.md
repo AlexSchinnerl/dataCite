@@ -19,13 +19,13 @@ re
 * [x] ``<resourceType> <resourceTypeGeneral="Software">XML </resourceType>``
     * [x] resourceTypeGeneral soll "Text" sein~~
     * [x] kein text
-*   ``<formats>    <format>application/xml </format>   </formats>``
-    * befüllen mit "PDF" (wir haben nix anderes)
+* [] ``<formats>    <format>application/xml </format>   </formats>``
+    [x]* befüllen mit "PDF" (wir haben nix anderes)
     * alternativ auch aus datafield tag="347" ind1=" " ind2=" "> subfield code="b">PDF /subfield>
-* descriptions> description xml:lang="en-US" descriptionType="Abstract">XML example of all DataCite Metadata Schema v4.4 properties./description>   /descriptions>
+* [] `` <descriptions> <description xml:lang="en-US" descriptionType="Abstract">XML example of all DataCite Metadata Schema v4.4 properties.</description>   </descriptions>``
     * ---NB! 520 kann mehrmals vorkommen.
         * descriptionType="Abstract"
-            * befüllen mit datafield tag="520" ind1=" " ind2=" "> subfield code="a">
+            * [x] befüllen mit ``<datafield tag="520" ind1=" " ind2=" "> <subfield code="a">``
             * Prefix Text "eng: " entfernen (ev. auch ger:)
         * descriptionType="SeriesInformation"
             * datafield tag="490" ind1="0" ind2=" "> subfield code="a">RISC Report Series /subfield> subfield code="v">22-04 /subfield>
