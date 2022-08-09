@@ -13,3 +13,44 @@ re
 
 # Mapping
 "What goes where"
+
+# ToDo
+
+* [x] ``<resourceType> <resourceTypeGeneral="Software">XML </resourceType>``
+    * [x] resourceTypeGeneral soll "Text" sein~~
+    * [x] kein text
+*   ``<formats>    <format>application/xml </format>   </formats>``
+    * befüllen mit "PDF" (wir haben nix anderes)
+    * alternativ auch aus datafield tag="347" ind1=" " ind2=" "> subfield code="b">PDF /subfield>
+* descriptions> description xml:lang="en-US" descriptionType="Abstract">XML example of all DataCite Metadata Schema v4.4 properties./description>   /descriptions>
+    * ---NB! 520 kann mehrmals vorkommen.
+        * descriptionType="Abstract"
+            * befüllen mit datafield tag="520" ind1=" " ind2=" "> subfield code="a">
+            * Prefix Text "eng: " entfernen (ev. auch ger:)
+        * descriptionType="SeriesInformation"
+            * datafield tag="490" ind1="0" ind2=" "> subfield code="a">RISC Report Series /subfield> subfield code="v">22-04 /subfield>
+                * NB! subfielder mit "," getrennt
+            * Bei ZS: 773 0 9 $t $g NB! $t und $g mit "," getrennt
+                * z.B. AC16411195
+* alternateIdentifiers> alternateIdentifier alternateIdentifierType="URL"> /alternateIdentifier>  /alternateIdentifiers>
+    * befüllen mit URN
+    * alternateIdentifierType="URN"
+    * NB! Identifiers nur mit DOI
+* rightsList> rights xml:lang="en-US" schemeURI="https://spdx.org/licenses/" rightsIdentifierScheme="SPDX" rightsIdentifier="CC0 1.0" rightsURI="https://creativecommons.org/publicdomain/zero/1.0/" /> /rightsList>
+    * rightsIdentifier="CC BY 4.0 " standardmäßig einfügen
+    * Rights URI: https://creativecommons.org/licenses/by/4.0/legalcode
+    * Felder im datafield tag="540" subfield code="f" subfield code="u" (hat leider eine andere URL)
+* sizes> size>4 kB /size> /sizes>
+    * befüllen mit datafield tag="300" ind1=" " ind2=" "> subfield code="a">1 Online-Ressource (22 Seiten) /subfield> /datafield>
+    * NB! nur die Seitenzahl (22) + "pages" anhängen
+* fundingReferences> fundingReference>
+      funderName>National Science Foundation /funderName>
+      funderIdentifier funderIdentifierType="Crossref Funder ID">https://doi.org/10.13039/100000001 /funderIdentifier>
+      awardNumber>CBET-106 /awardNumber>
+      awardTitle>Full DataCite XML Example /awardTitle>
+    /fundingReference> /fundingReferences>
+    * datafield tag="536" ind1=" " ind2=" "> subfield code="a">Fonds zur Förderung der Wissenschaftlichen Forschung /subfield> subfield code="f">P 35530 /subfield>
+        * funderName> --> subfield code="a">
+        * awardNumber> --> subfield code="f">
+        * funderIdentifier --> DOI des Funders (ev. wenn FWF: xxx, else: yyy)
+        
