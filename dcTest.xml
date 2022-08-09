@@ -1,0 +1,19 @@
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-4 https://schema.datacite.org/meta/kernel-4.4/metadata.xsd">
+    <identifier identifierType="DOI"></identifier>
+    <creators>
+        <creator>
+            <creatorName nameType="Personal">Grashoff, Dietrich</creatorName>
+            <givenName> Dietrich</givenName>
+            <familyName>Grashoff</familyName>
+            <nameIdentifier schemeURI="https://orcid.org/" nameIdentifierScheme="ORCID"></nameIdentifier>
+            <affiliation></affiliation>
+        </creator>
+    </creators>
+    <titles>
+        <title xml:lang="en-US">Grundz&#252;ge des Steuerrechts</title>
+        <title xml:lang="en-US" titleType="Subtitle">alle wichtigen Steuerarten, internationales Steuerrecht, Verfahrensrecht</title>
+    </titles>
+    <publisher xml:lang="en">C.H. Beck</publisher>
+    <publicationYear>[2018]</publicationYear>
+    <language>ger</language>
+</resource>

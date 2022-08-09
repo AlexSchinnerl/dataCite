@@ -1,0 +1,41 @@
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-4 https://schema.datacite.org/meta/kernel-4.4/metadata.xsd">
+    <identifier identifierType="doi">10.35011/risc.22-04</identifier>
+    <identifier identifierType="urn">urn:nbn:at:at-ubl:3-12218</identifier>
+    <creators>
+        <creator>
+            <creatorName nameType="Personal">Kutsia, Temur</creatorName>
+            <givenName> Temur</givenName>
+            <familyName>Kutsia</familyName>
+            <nameIdentifier schemeURI="https://orcid.org/" nameIdentifierScheme="ORCID"></nameIdentifier>
+            <affiliation></affiliation>
+        </creator>
+        <creator>
+            <creatorName nameType="Personal">Pau, Cleo</creatorName>
+            <givenName> Cleo</givenName>
+            <familyName>Pau</familyName>
+            <nameIdentifier schemeURI="https://orcid.org/" nameIdentifierScheme="ORCID"></nameIdentifier>
+            <affiliation></affiliation>
+        </creator>
+        <creator>
+            <creatorName nameType="Personal">2Pau, 2Cleo</creatorName>
+            <givenName> 2Cleo</givenName>
+            <familyName>2Pau</familyName>
+            <nameIdentifier schemeURI="https://orcid.org/" nameIdentifierScheme="ORCID"></nameIdentifier>
+            <affiliation></affiliation>
+        </creator>
+        <creator>
+            <creatorName nameType="Personal">3Pau, 3Cleo</creatorName>
+            <givenName> 3Cleo</givenName>
+            <familyName>3Pau</familyName>
+            <nameIdentifier schemeURI="https://orcid.org/" nameIdentifierScheme="ORCID"></nameIdentifier>
+            <affiliation></affiliation>
+        </creator>
+    </creators>
+    <titles>
+        <title>&lt;&lt;A&gt;&gt; framework for approximate generalization in quantitative theories</title>
+        <title titleType="Subtitle">RISC Report Series, 22-04</title>
+    </titles>
+    <publisher>Research Institute for Symbolic Computation (RISC), Johannes Kepler Universit&#228;t Linz</publisher>
+    <publicationYear>2022</publicationYear>
+    <language>eng</language>
+</resource>

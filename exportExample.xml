@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection>
+    <record>
+        <leader>02485nam a2200421 c 4500</leader>
+        <controlfield tag="001">997030355903340</controlfield>
+        <controlfield tag="005">20220516114952.0</controlfield>
+        <controlfield tag="007">cr#|||||||||||</controlfield>
+        <controlfield tag="008">220513s2022    ||||||||o|||||||||||eng|c</controlfield>
+        <controlfield tag="009">AC16525066</controlfield>
+        <datafield tag="024" ind1="7" ind2=" ">
+            <subfield code="a">10.35011/risc.22-04</subfield>
+            <subfield code="2">doi</subfield>
+        </datafield>
+        <datafield tag="024" ind1="7" ind2=" ">
+            <subfield code="a">urn:nbn:at:at-ubl:3-12218</subfield>
+            <subfield code="2">urn</subfield>
+        </datafield>
+        <datafield tag="035" ind1=" " ind2=" ">
+            <subfield code="a">(AT-OBV)AC16525066</subfield>
+        </datafield>
+        <datafield tag="035" ind1=" " ind2=" ">
+            <subfield code="a">(VLID)7744792</subfield>
+        </datafield>
+        <datafield tag="035" ind1=" " ind2=" ">
+            <subfield code="a">(DE-599)OBVAC16525066</subfield>
+        </datafield>
+        <datafield tag="035" ind1=" " ind2=" ">
+            <subfield code="a">(EXLNZ-43ACC_NETWORK)99146776166203331</subfield>
+        </datafield>
+        <datafield tag="040" ind1=" " ind2=" ">
+            <subfield code="a">AT-UBL</subfield>
+            <subfield code="b">ger</subfield>
+            <subfield code="d">AT-UBL</subfield>
+            <subfield code="e">rda</subfield>
+        </datafield>
+        <datafield tag="041" ind1=" " ind2=" ">
+            <subfield code="a">eng</subfield>
+        </datafield>
+        <datafield tag="044" ind1=" " ind2=" ">
+            <subfield code="c">XA-AT</subfield>
+        </datafield>
+        <datafield tag="100" ind1="1" ind2=" ">
+            <subfield code="a">Kutsia, Temur</subfield>
+            <subfield code="4">aut</subfield>
+        </datafield>
+        <datafield tag="245" ind1="1" ind2="0">
+            <subfield code="a">&lt;&lt;A&gt;&gt; framework for approximate generalization in quantitative theories</subfield>
+            <subfield code="b">RISC Report Series, 22-04</subfield>
+        </datafield>
+        <datafield tag="264" ind1=" " ind2="1">
+            <subfield code="a">Linz</subfield>
+            <subfield code="b">Research Institute for Symbolic Computation (RISC), Johannes Kepler Universität Linz</subfield>
+            <subfield code="c">May 2022</subfield>
+        </datafield>
+        <datafield tag="300" ind1=" " ind2=" ">
+            <subfield code="a">1 Online-Ressource (22 Seiten)</subfield>
+        </datafield>
+        <datafield tag="336" ind1=" " ind2=" ">
+            <subfield code="b">txt</subfield>
+        </datafield>
+        <datafield tag="337" ind1=" " ind2=" ">
+            <subfield code="b">c</subfield>
+        </datafield>
+        <datafield tag="338" ind1=" " ind2=" ">
+            <subfield code="b">cr</subfield>
+        </datafield>
+        <datafield tag="347" ind1=" " ind2=" ">
+            <subfield code="a">Textdatei</subfield>
+            <subfield code="b">PDF</subfield>
+        </datafield>
+        <datafield tag="490" ind1="0" ind2=" ">
+            <subfield code="a">RISC Report Series</subfield>
+            <subfield code="v">22-04</subfield>
+        </datafield>
+        <datafield tag="506" ind1="0" ind2=" ">
+            <subfield code="f">Unrestricted online access</subfield>
+            <subfield code="2">star</subfield>
+        </datafield>
+        <datafield tag="520" ind1=" " ind2=" ">
+            <subfield code="a">eng: Anti-unification aims at computing generalizations for given terms, retaining their common structure and abstracting differences by variables. We study quantitative anti-unification where the notion of the common structure is relaxed into &amp;quot;proximal&amp;#039;&amp;#039; up to the given degree with respect to the given fuzzy proximity relation. Proximal symbols may have different names and arities. We develop a generic set of rules for computing minimal complete sets of approximate generalizations and study their properties. Depending on the characterizations of proximities between symbols and the desired forms of solutions, these rules give rise to different versions of concrete algorithms.</subfield>
+        </datafield>
+        <datafield tag="536" ind1=" " ind2=" ">
+            <subfield code="a">Fonds zur Förderung der Wissenschaftlichen Forschung</subfield>
+            <subfield code="f">P 35530</subfield>
+        </datafield>
+        <datafield tag="540" ind1=" " ind2=" ">
+            <subfield code="f">CC BY 4.0</subfield>
+            <subfield code="u">https://creativecommons.org/licenses/by/4.0/deed.de</subfield>
+            <subfield code="2">cc</subfield>
+        </datafield>
+        <datafield tag="700" ind1="1" ind2=" ">
+            <subfield code="a">Pau, Cleo</subfield>
+            <subfield code="4">aut</subfield>
+        </datafield>
+        <datafield tag="700" ind1="1" ind2=" ">
+            <subfield code="a">2Pau, 2Cleo</subfield>
+            <subfield code="4">aut</subfield>
+        </datafield>
+        <datafield tag="700" ind1="1" ind2=" ">
+            <subfield code="a">3Pau, 3Cleo</subfield>
+            <subfield code="4">aut</subfield>
+        </datafield>        
+        <datafield tag="710" ind1="2" ind2=" ">
+            <subfield code="a">Fonds zur Förderung der Wissenschaftlichen Forschung</subfield>
+            <subfield code="0">(DE-588)2054142-9</subfield>
+            <subfield code="4">spn</subfield>
+        </datafield>
+        <datafield tag="856" ind1="4" ind2="0">
+            <subfield code="m">V:AT-OBV;B:AT-UBL</subfield>
+            <subfield code="o">OBV-EDOC-VL</subfield>
+            <subfield code="q">text/html</subfield>
+            <subfield code="u">https://resolver.obvsg.at/urn:nbn:at:at-ubl:3-12218</subfield>
+            <subfield code="x">UBL</subfield>
+            <subfield code="z">kostenfrei</subfield>
+            <subfield code="3">Volltext</subfield>
+        </datafield>
+        <datafield tag="970" ind1="2" ind2=" ">
+            <subfield code="d">OA-MONOGRAPH</subfield>
+        </datafield>
+        <datafield tag="970" ind1="9" ind2=" ">
+            <subfield code="m">V:AT-OBV;B:AT-UBL</subfield>
+            <subfield code="q">application/pdf</subfield>
+            <subfield code="u">http://media.obvsg.at/AC16525066-2001</subfield>
+            <subfield code="x">UBL</subfield>
+            <subfield code="z">kostenfrei</subfield>
+            <subfield code="3">Volltext</subfield>
+        </datafield>
+        <datafield tag="971" ind1="5" ind2=" ">
+            <subfield code="a">Universität Linz</subfield>
+            <subfield code="b">Technisch-Naturwissenschaftliche Fakultät</subfield>
+            <subfield code="c">Institut für Symbolisches Rechnen (RISC)</subfield>
+            <subfield code="0">ioo:UL:TN:SR</subfield>
+        </datafield>
+        <datafield tag="971" ind1="9" ind2=" ">
+            <subfield code="a">Generalization / anti-unification / quantiative theories / fuzzy proximity relations</subfield>
+        </datafield>
+    </record>
+</collection>
