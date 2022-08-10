@@ -24,4 +24,5 @@ Subfelder ´, die nicht vorhanden sein können abfangen...
     * Wird im Moment mit "PDF" befüllt. Alternativ auch aus 347er subfield "b"
 * ``rightsList> rights ``
     * Wird standardmäßig mit "CC BY 4.0 " und fixer URL befüllt. Alternativ: 540er subfield "f" und subfield "u" (hat aber leider eine andere URL)
+* Funding Reference in Dictionary
         
