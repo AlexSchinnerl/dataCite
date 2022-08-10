@@ -46,4 +46,11 @@
     <sizes>
         <size>22 pages</size>
     </sizes>
+    <fundingReferences>
+        <fundingReference>
+            <funderName>Austrian Science Fund</funderName>
+            <funderIdentifier funderIdentifierType="Crossref Funder ID">https://doi.org/10.13039/501100002428</funderIdentifier>
+            <awardNumber>P 35530</awardNumber>
+        </fundingReference>
+    </fundingReferences>
 </resource>

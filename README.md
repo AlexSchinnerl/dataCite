@@ -40,3 +40,12 @@ re
     * [x] rightsIdentifier="CC BY 4.0 " standardmäßig einfügen
     * [x] Rights URI: https://creativecommons.org/licenses/by/4.0/legalcode
     * Felder im datafield tag="540" subfield code="f" subfield code="u" (hat leider eine andere URL)
+* [x] ``<sizes> <size>4 kB </size> </sizes>``
+    * [x] befüllen mit ''<datafield tag="300" ind1=" " ind2=" "> <subfield code="a">1 Online-Ressource (22 Seiten) </subfield> </datafield>
+    * [x] NB! nur die Seitenzahl (22) + "pages" anhängen
+* [x] ``<fundingReferences> <fundingReference> <funderName>National Science Foundation </funderName> <funderIdentifier funderIdentifierType="Crossref Funder ID">https://doi.org/10.13039/100000001 </funderIdentifier> <awardNumber>CBET-106 </awardNumber> <awardTitle>Full DataCite XML Example </awardTitle> </fundingReference> </fundingReferences> ``
+    * [x] ``<datafield tag="536" ind1=" " ind2=" "> <subfield code="a">Fonds zur Förderung der Wissenschaftlichen Forschung </subfield> <subfield code="f">P 35530 </subfield>``
+        * [x] funderName --> subfield code="a"
+        * [x] awardNumber --> subfield code="f"
+        * [x] funderIdentifier --> DOI des Funders (ev. wenn FWF: xxx, else: yyy)
+        
