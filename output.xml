@@ -3,6 +3,7 @@
     <alternateIdentifiers>
         <alternateIdentifier alternateIdentifierType="urn">urn:nbn:at:at-ubl:3-12218</alternateIdentifier>
     </alternateIdentifiers>
+    <language>eng</language>
     <creators>
         <creator>
             <creatorName nameType="Personal">Kutsia, Temur</creatorName>
@@ -31,21 +32,13 @@
     </titles>
     <publisher>Research Institute for Symbolic Computation (RISC), Johannes Kepler Universit&#228;t Linz</publisher>
     <publicationYear>2022</publicationYear>
-    <language>eng</language>
-    <resourceType resourceTypeGeneral="Text" />
-    <formats>
-        <format>PDF</format>
-    </formats>
+    <sizes>
+        <size>22 pages</size>
+    </sizes>
     <descriptions>
         <description descriptionType="Abstract">Anti-unification aims at computing generalizations for given terms, retaining their common structure and abstracting differences by variables. We study quantitative anti-unification where the notion of the common structure is relaxed into &amp;quot;proximal&amp;#039;&amp;#039; up to the given degree with respect to the given fuzzy proximity relation. Proximal symbols may have different names and arities. We develop a generic set of rules for computing minimal complete sets of approximate generalizations and study their properties. Depending on the characterizations of proximities between symbols and the desired forms of solutions, these rules give rise to different versions of concrete algorithms.</description>
         <description descriptionType="SeriesInformation">Computer Aided Geometric Design, 2021 (2021), 85</description>
     </descriptions>
-    <rightsList>
-        <rights rightsIdentifier="CC BY 4.0" rightsURI="https://creativecommons.org/licenses/by/4.0/legalcode" />
-    </rightsList>
-    <sizes>
-        <size>22 pages</size>
-    </sizes>
     <fundingReferences>
         <fundingReference>
             <funderName>Austrian Science Fund</funderName>
@@ -53,4 +46,11 @@
             <awardNumber>P 35530</awardNumber>
         </fundingReference>
     </fundingReferences>
+    <formats>
+        <format>PDF</format>
+    </formats>
+    <resourceType resourceTypeGeneral="Text" />
+    <rightsList>
+        <rights rightsIdentifier="CC BY 4.0" rightsURI="https://creativecommons.org/licenses/by/4.0/legalcode" />
+    </rightsList>
 </resource>

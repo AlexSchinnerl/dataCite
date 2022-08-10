@@ -15,6 +15,9 @@ re
 The programm takes an Alma export file as input and it is basically searching for a specific datafield tag in the xml Tree. Then take the information of the field (text, attributes, ...) an asign them to a xml tag corresponding to the template needed to upload the xml at the dataCite Website.
 
 # ToDo
+Offene Frage: Welches Datafield, bzw. Subfield kann einmal nicht vorhanden sein, welches ist immer da?
+
+Subfelder ´, die nicht vorhanden sein können abfangen...
 
 ## NiceToHave
 * ``formats > format``
