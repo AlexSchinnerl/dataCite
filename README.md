@@ -24,13 +24,13 @@ re
     * alternativ auch aus datafield tag="347" ind1=" " ind2=" "> subfield code="b">PDF /subfield>
 * [] `` <descriptions> <description xml:lang="en-US" descriptionType="Abstract">XML example of all DataCite Metadata Schema v4.4 properties.</description>   </descriptions>``
     * [x] ---NB! 520 kann mehrmals vorkommen.
-        * descriptionType="Abstract"
+        * [x] descriptionType="Abstract"
             * [x] befüllen mit ``<datafield tag="520" ind1=" " ind2=" "> <subfield code="a">``
-            * Prefix Text "eng: " entfernen (ev. auch ger:)
+            * [x] Prefix Text "eng: " entfernen (ev. auch ger:)
         * descriptionType="SeriesInformation"
             * [x] `` <datafield tag="490" ind1="0" ind2=" "> <subfield code="a">RISC Report Series </subfield> <subfield code="v">22-04 </subfield> ``
                 * [x] NB! subfielder mit "," getrennt
-            * Bei ZS: 773 0 9 $t $g NB! $t und $g mit "," getrennt
+            * [ ] Bei ZS: 773 0 9 $t $g NB! $t und $g mit "," getrennt
                 * z.B. AC16411195
 * [x] `` <alternateIdentifiers> <alternateIdentifier alternateIdentifierType="URL"> </alternateIdentifier>  </alternateIdentifiers> ``
     * [x] befüllen mit URN

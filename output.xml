@@ -37,7 +37,7 @@
         <format>PDF</format>
     </formats>
     <descriptions>
-        <description descriptionType="Abstract">eng: Anti-unification aims at computing generalizations for given terms, retaining their common structure and abstracting differences by variables. We study quantitative anti-unification where the notion of the common structure is relaxed into &amp;quot;proximal&amp;#039;&amp;#039; up to the given degree with respect to the given fuzzy proximity relation. Proximal symbols may have different names and arities. We develop a generic set of rules for computing minimal complete sets of approximate generalizations and study their properties. Depending on the characterizations of proximities between symbols and the desired forms of solutions, these rules give rise to different versions of concrete algorithms.</description>
+        <description descriptionType="Abstract">Anti-unification aims at computing generalizations for given terms, retaining their common structure and abstracting differences by variables. We study quantitative anti-unification where the notion of the common structure is relaxed into &amp;quot;proximal&amp;#039;&amp;#039; up to the given degree with respect to the given fuzzy proximity relation. Proximal symbols may have different names and arities. We develop a generic set of rules for computing minimal complete sets of approximate generalizations and study their properties. Depending on the characterizations of proximities between symbols and the desired forms of solutions, these rules give rise to different versions of concrete algorithms.</description>
         <description descriptionType="SeriesInformation">RISC Report Series, 22-04</description>
     </descriptions>
     <rightsList>
