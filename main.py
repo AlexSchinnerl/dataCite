@@ -6,7 +6,8 @@ def create_DCxml(record):
     output = ET.Element("resource")
     output.attrib = {
         "xmlns:xsi":"http://www.w3.org/2001/XMLSchema-instance",
-        "xsi:schemaLocation": "http://datacite.org/schema/kernel-4 https://schema.datacite.org/meta/kernel-4.4/metadata.xsd"
+        "xsi:schemaLocation": "http://datacite.org/schema/kernel-4 https://schema.datacite.org/meta/kernel-4.4/metadata.xsd",
+        "xmlns":"http://datacite.org/schema/kernel-4"
         }
 
     # Dictionary to map functions to Alma Datafield

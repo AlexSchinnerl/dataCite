@@ -67,7 +67,13 @@ def create_title(output, record):
     titles = ET.Element("titles")
     # ------------------------------ Main Title
     title = ET.SubElement(titles, "title")
-    title.text = titleMRC.find("subfield[@code='a']").text
+    # check if << OR >> are present in title and remove them
+    titleText = titleMRC.find("subfield[@code='a']").text
+    toCut = re.findall("<<|>>", titleText)
+    for item in toCut:
+            if item in titleText:
+                    titleText = titleText.replace(item, "")
+    title.text = titleText
     # ------------------------------ Subtitle
     if titleMRC.find("subfield[@code='b']") != None:
         subtitle = ET.SubElement(titles, "title")
