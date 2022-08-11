@@ -37,13 +37,12 @@ def create_DCxml(record):
 def main():
     # Load Alma xml
     tree = ET.parse("inputFile.xml")
-    collection = tree.getroot() # rename root in collection (export starts with collection)
+    collection = tree.getroot()
     counter = 0
     for record in collection:
         output = create_DCxml(record)
         # create tree ---------------------------------------------------
         outputTree = ET.ElementTree(output)
-        # -------------------------------------------------------------
         # write output--------------------------------------------------------------
         acNr = record.find(".//controlfield[@tag='009']").text
         outputTree.write("output/output_{}.xml".format(acNr))
