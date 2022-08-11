@@ -104,12 +104,12 @@ def create_size(output, record):
     sizeMRC = record.find(".//datafield[@tag='300']")
     sizes = ET.Element("sizes")
     size = ET.SubElement(sizes, "size")
-    if re.search("(?<=\()\d+", sizeMRC.find("subfield[@code='a']").text) is None:
-        size.text = record.find(".//datafield[@tag='300']").find("subfield[@code='a']").text
-    else:
+    if re.search("(?<=\()\d+", sizeMRC.find("subfield[@code='a']").text) != None:
         pageNr = re.search("(?<=\()\d+", sizeMRC.find("subfield[@code='a']").text).group() # match 1-n digits after ()
         size.text = str(pageNr + " pages")
-
+    # else:
+        # size.text = record.find(".//datafield[@tag='300']").find("subfield[@code='a']").text
+        
     output.append(sizes)
 
 # Descriptions -------------------------------------------------------------

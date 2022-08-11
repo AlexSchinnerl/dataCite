@@ -36,9 +36,9 @@ def create_DCxml(record):
 
 def main():
     # Load Alma xml
-    tree = ET.parse("exportExample_combined.xml")
+    tree = ET.parse("inputFile.xml")
     collection = tree.getroot() # rename root in collection (export starts with collection)
-
+    counter = 0
     for record in collection:
         output = create_DCxml(record)
         # create tree ---------------------------------------------------
@@ -46,7 +46,10 @@ def main():
         # -------------------------------------------------------------
         # write output--------------------------------------------------------------
         acNr = record.find(".//controlfield[@tag='009']").text
-        outputTree.write("{}_{}.xml".format("output", acNr))
+        outputTree.write("output/output_{}.xml".format(acNr))
+        print("created output_{}.xml".format(acNr))
+        counter+=1
+    print("completed {} files".format(counter))
 
 if __name__ == "__main__":
     main()
