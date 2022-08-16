@@ -1,9 +1,17 @@
 import xml.etree.ElementTree as ET
 import re
 
-# Identifier -------------------------------------------------------------
+# Date -------------------------------------------------------------
+def create_date(output, record):
+    '''Fills the Date Tag with the Date extracted from Alma 008 pos 0-5'''
+    dateMRC = record.find(".//controlfield[@tag='008']")
+    date_alma = re.search("^\d{6}", dateMRC.text).group()
+    date_alma = "20"+date_alma[:2]+"-"+date_alma[2:4]+"-"+date_alma[4:]
+    dates_op = ET.Element("dates")
+    date_op = ET.SubElement(dates_op, "date", attrib={"dateType":"Available"})
+    date_op.text = date_alma
 
-
+    output.append(dates_op)
 
 # Identifier -------------------------------------------------------------
 def create_identifier(output, record):

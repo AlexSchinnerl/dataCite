@@ -12,6 +12,7 @@ def create_DCxml(record):
 
     # Dictionary to map functions to Alma Datafield
     tagsDict = {
+        "008":map_functions.create_date(output, record),
         "024":map_functions.create_identifier(output, record),
         "041":map_functions.create_language(output, record),
         "100":map_functions.create_creator(output, record),

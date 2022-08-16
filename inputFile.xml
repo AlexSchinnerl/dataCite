@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <collection>
     <record>
-        <leader>02485nam a2200421 c 4500</leader>
-        <controlfield tag="001">997030355903340</controlfield>
-        <controlfield tag="005">20220516114952.0</controlfield>
+        <leader>03501naa a2200421 c 4500</leader>
+        <controlfield tag="001">997047626603340</controlfield>
+        <controlfield tag="005">20220812120917.0</controlfield>
         <controlfield tag="007">cr#|||||||||||</controlfield>
-        <controlfield tag="008">220513s2022    ||||||||o|||||||||||eng|c</controlfield>
-        <controlfield tag="009">AC16525066</controlfield>
+        <controlfield tag="008">220809s2022    ||||||||o|||||||||||eng|c</controlfield>
+        <controlfield tag="009">AC16591204</controlfield>
         <datafield tag="024" ind1="7" ind2=" ">
-            <subfield code="a">10.35011/risc.22-04</subfield>
-            <subfield code="2">doi</subfield>
-        </datafield>
-        <datafield tag="024" ind1="7" ind2=" ">
-            <subfield code="a">urn:nbn:at:at-ubl:3-12218</subfield>
+            <subfield code="a">urn:nbn:at:at-ubl:3-13241</subfield>
             <subfield code="2">urn</subfield>
         </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(AT-OBV)AC16525066</subfield>
+        <datafield tag="024" ind1="7" ind2=" ">
+            <subfield code="a">10.35011/icchp-aaate22-p2-03</subfield>
+            <subfield code="2">doi</subfield>
         </datafield>
         <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(VLID)7744792</subfield>
+            <subfield code="a">(AT-OBV)AC16591204</subfield>
         </datafield>
         <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(DE-599)OBVAC16525066</subfield>
+            <subfield code="a">(VLID)7956590</subfield>
         </datafield>
         <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(EXLNZ-43ACC_NETWORK)99146776166203331</subfield>
+            <subfield code="a">(DE-599)OBVAC16591204</subfield>
+        </datafield>
+        <datafield tag="035" ind1=" " ind2=" ">
+            <subfield code="a">(EXLNZ-43ACC_NETWORK)99146920355803331</subfield>
         </datafield>
         <datafield tag="040" ind1=" " ind2=" ">
             <subfield code="a">AT-UBL</subfield>
@@ -40,149 +40,24 @@
             <subfield code="c">XA-AT</subfield>
         </datafield>
         <datafield tag="100" ind1="1" ind2=" ">
-            <subfield code="a">Kutsia, Temur</subfield>
+            <subfield code="a">Rwampigi, Aniyamuzaala James</subfield>
             <subfield code="4">aut</subfield>
         </datafield>
         <datafield tag="245" ind1="1" ind2="0">
-            <subfield code="a">&lt;&lt;A&gt;&gt; framework for approximate generalization in quantitative theories</subfield>
-            <subfield code="b">RISC Report Series, 22-04</subfield>
-        </datafield>
-        <datafield tag="264" ind1=" " ind2="1">
-            <subfield code="a">Linz</subfield>
-            <subfield code="b">Research Institute for Symbolic Computation (RISC), Johannes Kepler Universität Linz</subfield>
-            <subfield code="c">May 2022</subfield>
-        </datafield>
-        <datafield tag="300" ind1=" " ind2=" ">
-            <subfield code="a">1 Online-Ressource (22 Seiten)</subfield>
-        </datafield>
-        <datafield tag="336" ind1=" " ind2=" ">
-            <subfield code="b">txt</subfield>
-        </datafield>
-        <datafield tag="337" ind1=" " ind2=" ">
-            <subfield code="b">c</subfield>
-        </datafield>
-        <datafield tag="338" ind1=" " ind2=" ">
-            <subfield code="b">cr</subfield>
-        </datafield>
-        <datafield tag="347" ind1=" " ind2=" ">
-            <subfield code="a">Textdatei</subfield>
-            <subfield code="b">PDF</subfield>
-        </datafield>
-        <datafield tag="490" ind1="0" ind2=" ">
-            <subfield code="a">RISC Report Series</subfield>
-            <subfield code="v">22-04</subfield>
-        </datafield>
-        <datafield tag="506" ind1="0" ind2=" ">
-            <subfield code="f">Unrestricted online access</subfield>
-            <subfield code="2">star</subfield>
-        </datafield>
-        <datafield tag="520" ind1=" " ind2=" ">
-            <subfield code="a">eng: Anti-unification aims at computing generalizations for given terms, retaining their common structure and abstracting differences by variables. We study quantitative anti-unification where the notion of the common structure is relaxed into &amp;quot;proximal&amp;#039;&amp;#039; up to the given degree with respect to the given fuzzy proximity relation. Proximal symbols may have different names and arities. We develop a generic set of rules for computing minimal complete sets of approximate generalizations and study their properties. Depending on the characterizations of proximities between symbols and the desired forms of solutions, these rules give rise to different versions of concrete algorithms.</subfield>
-        </datafield>
-        <datafield tag="536" ind1=" " ind2=" ">
-            <subfield code="a">Fonds zur Förderung der Wissenschaftlichen Forschung</subfield>
-            <subfield code="f">P 35530</subfield>
-        </datafield>
-        <datafield tag="540" ind1=" " ind2=" ">
-            <subfield code="f">CC BY 4.0</subfield>
-            <subfield code="u">https://creativecommons.org/licenses/by/4.0/deed.de</subfield>
-            <subfield code="2">cc</subfield>
-        </datafield>
-        <datafield tag="700" ind1="1" ind2=" ">
-            <subfield code="a">Pau, Cleo</subfield>
-            <subfield code="4">aut</subfield>
-        </datafield>        
-        <datafield tag="710" ind1="2" ind2=" ">
-            <subfield code="a">Fonds zur Förderung der Wissenschaftlichen Forschung</subfield>
-            <subfield code="0">(DE-588)2054142-9</subfield>
-            <subfield code="4">spn</subfield>
-        </datafield>
-        <datafield tag="856" ind1="4" ind2="0">
-            <subfield code="m">V:AT-OBV;B:AT-UBL</subfield>
-            <subfield code="o">OBV-EDOC-VL</subfield>
-            <subfield code="q">text/html</subfield>
-            <subfield code="u">https://resolver.obvsg.at/urn:nbn:at:at-ubl:3-12218</subfield>
-            <subfield code="x">UBL</subfield>
-            <subfield code="z">kostenfrei</subfield>
-            <subfield code="3">Volltext</subfield>
-        </datafield>
-        <datafield tag="970" ind1="2" ind2=" ">
-            <subfield code="d">OA-MONOGRAPH</subfield>
-        </datafield>
-        <datafield tag="970" ind1="9" ind2=" ">
-            <subfield code="m">V:AT-OBV;B:AT-UBL</subfield>
-            <subfield code="q">application/pdf</subfield>
-            <subfield code="u">http://media.obvsg.at/AC16525066-2001</subfield>
-            <subfield code="x">UBL</subfield>
-            <subfield code="z">kostenfrei</subfield>
-            <subfield code="3">Volltext</subfield>
-        </datafield>
-        <datafield tag="971" ind1="5" ind2=" ">
-            <subfield code="a">Universität Linz</subfield>
-            <subfield code="b">Technisch-Naturwissenschaftliche Fakultät</subfield>
-            <subfield code="c">Institut für Symbolisches Rechnen (RISC)</subfield>
-            <subfield code="0">ioo:UL:TN:SR</subfield>
-        </datafield>
-        <datafield tag="971" ind1="9" ind2=" ">
-            <subfield code="a">Generalization / anti-unification / quantiative theories / fuzzy proximity relations</subfield>
-        </datafield>
-    </record>
-    <record>
-        <leader>03043naa#a2200445#c#4500</leader>
-        <controlfield tag="001">996992733803340</controlfield>
-        <controlfield tag="005">20220225103401.0</controlfield>
-        <controlfield tag="007">cr#|||||||||||</controlfield>
-        <controlfield tag="008">211227s2021####||||||||o#||||||||||eng|c</controlfield>
-        <controlfield tag="009">AC16411195</controlfield>
-        <datafield tag="024" ind1="7" ind2=" ">
-            <subfield code="a">10.1016/j.cagd.2021.101975</subfield>
-            <subfield code="2">doi</subfield>
-        </datafield>
-        <datafield tag="024" ind1="7" ind2=" ">
-            <subfield code="a">urn:nbn:at:at-ubl:3-10193</subfield>
-            <subfield code="2">urn</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(AT-OBV)AC16411195</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(VLID)6898610</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(DE-599)OBVAC16411195</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(EXLNZ-43ACC_NETWORK)99146453663103331</subfield>
-        </datafield>
-        <datafield tag="040" ind1=" " ind2=" ">
-            <subfield code="a">AT-UBL</subfield>
-            <subfield code="b">ger</subfield>
-            <subfield code="d">AT-UBL</subfield>
-            <subfield code="e">rda</subfield>
-        </datafield>
-        <datafield tag="041" ind1=" " ind2=" ">
-            <subfield code="a">eng</subfield>
-        </datafield>
-        <datafield tag="044" ind1=" " ind2=" ">
-            <subfield code="c">XA-AT</subfield>
-        </datafield>
-        <datafield tag="100" ind1="1" ind2=" ">
-            <subfield code="a">Groiss, Lisa</subfield>
-            <subfield code="4">aut</subfield>
-        </datafield>
-        <datafield tag="245" ind1="1" ind2="0">
-            <subfield code="a">27 variants of Tutte's theorem for plane near-triangulations and an application to periodic spline surface fitting</subfield>
+            <subfield code="a">&lt;&lt;The&gt;&gt; Non-discrimination and Accessibility Public policy practices and approaches to assistive technology and Inclusion</subfield>
+            <subfield code="b">The Implication on the coverage of AT solutions</subfield>
         </datafield>
         <datafield tag="251" ind1=" " ind2=" ">
             <subfield code="a">vor</subfield>
             <subfield code="2">coar</subfield>
         </datafield>
         <datafield tag="264" ind1=" " ind2="1">
-            <subfield code="b">Elsevier</subfield>
-            <subfield code="c">2021</subfield>
+            <subfield code="a">Linz</subfield>
+            <subfield code="b">Association ICCHP</subfield>
+            <subfield code="c">2022</subfield>
         </datafield>
         <datafield tag="300" ind1=" " ind2=" ">
-            <subfield code="a">1 Online-Ressource</subfield>
+            <subfield code="a">1 Online-Ressource (4 Seiten)</subfield>
         </datafield>
         <datafield tag="336" ind1=" " ind2=" ">
             <subfield code="b">txt</subfield>
@@ -201,65 +76,54 @@
             <subfield code="f">Unrestricted online access</subfield>
             <subfield code="2">star</subfield>
         </datafield>
-        <datafield tag="520" ind1=" " ind2=" ">
-            <subfield code="a">eng: The theoretical basis of Floater's parameterization technique for triangulated surfaces is simultaneously a generalization (to non-barycentric weights) and a specialization (to a plane near-triangulation, which is an embedding of a planar graph with the property that all bounded faces are – possibly curved – triangles) of Tutte's Spring Embedding Theorem. Extensions of this technique cover surfaces with holes and periodic surfaces. The proofs presented previously need advanced concepts, such as rather involved results from graph theory or the theory of discrete 1-forms and consistent perturbations, or are not directly applicable to the above-mentioned extensions. We present a particularly simple geometric derivation of Tutte's theorem for plane near-triangulations and various extensions thereof, using solely the Euler formula for planar graphs. In particular, we include the case of meshes possessing a cylindrical topology – which has not yet been addressed explicitly but possesses important applications to periodic spline surface fitting – and we correct a minor inaccuracy in a previous result concerning Floater-type parameterizations for genus-1 meshes.</subfield>
-        </datafield>
-        <datafield tag="536" ind1=" " ind2=" ">
-            <subfield code="a">Fonds zur Förderung der Wissenschaftlichen Forschung</subfield>
-            <subfield code="f">NFN S117</subfield>
-        </datafield>
         <datafield tag="540" ind1=" " ind2=" ">
             <subfield code="f">CC BY 4.0</subfield>
             <subfield code="u">https://creativecommons.org/licenses/by/4.0/deed.de</subfield>
             <subfield code="2">cc</subfield>
         </datafield>
-        <datafield tag="700" ind1="1" ind2=" ">
-            <subfield code="a">Jüttler, Bert</subfield>
-            <subfield code="4">aut</subfield>
+        <datafield tag="500" ind1=" " ind2=" ">
+            <subfield code="a">Refereed/Peer-reviewed</subfield>
         </datafield>
-        <datafield tag="700" ind1="1" ind2=" ">
-            <subfield code="a">Mokriš, Dominik</subfield>
-            <subfield code="4">aut</subfield>
+        <datafield tag="520" ind1=" " ind2=" ">
+            <subfield code="a">eng: The review of the secondary data on the Assistive technology (AT) Public policies and laws revealed the Non-discrimination and Accessibility approaches to Assistive technology and Inclusion (NSH, 2007). The Convention on Rights of Persons with Disabilities (CRPD) recognised the Non-discrimination approach to AT as it stated that the use of Universal Design shall not exclude the assistive technology needed by persons with specific disabilities (UN, 2006; ar-ticle2). The CRPD recognised accessibility as both a human rights principle and a Right under articles 3 and 9 respectively. Assistive technology was also one of the Accessibility and reasonable accommodations recognised by the CRPD. The Multiple research methods composed of case study and mixed research methods were used to collect empirical data on the validation of the Non-discrimination and Accessibility practices and approaches . The qualitative data was collected through key informant interviews. The survey data on the validation of the AT legal and public policies approaches was collected and analysed. The findings reveals that Majority of students were not aware of the AT related public policies and laws. All students recommended the provision of AT based on non-discrimination principle and other CRPD human rights principles. The 2005 Disability Act and the 2015 Equality Acts prohibited discrimination of persons with disabilities in Ireland and provided for reasonable accommodations including provi-sion of AT products and services. Ireland ratified the CRPD in 2018 and committed to the Accessibility and Non-Discrimination approaches and practices. Ireland was a state party to the 2019 European Accessibility Act.</subfield>
         </datafield>
-        <datafield tag="710" ind1="2" ind2=" ">
-            <subfield code="a">Fonds zur Förderung der Wissenschaftlichen Forschung</subfield>
-            <subfield code="0">(DE-588)2054142-9</subfield>
-            <subfield code="4">spn</subfield>
+        <datafield tag="542" ind1=" " ind2=" ">
+            <subfield code="f">© The Author(s) 2022</subfield>
         </datafield>
         <datafield tag="773" ind1="0" ind2="8">
             <subfield code="i">Enthalten in</subfield>
-            <subfield code="t">Computer Aided Geometric Design</subfield>
-            <subfield code="d">Elsevier, 2021</subfield>
-            <subfield code="g">2021 (2021), 85</subfield>
+            <subfield code="t">ICCHP-AAATE 2022 Open Access Compendium "Assistive Technology, Accessibility and (e)Inclusion" Part II / Hoogerwerf, Evert-Jan ; Mavrou, Katerina</subfield>
+            <subfield code="d">Linz : Association ICCHP, 2022</subfield>
+            <subfield code="z">978-3-9504997-8-0</subfield>
+            <subfield code="g">Seite 25-28</subfield>
+            <subfield code="w">(AT-OBV)AC16591231</subfield>
+        </datafield>
+        <datafield tag="700" ind1="1" ind2=" ">
+            <subfield code="a">Goodman, Lizbeth</subfield>
+            <subfield code="4">aut</subfield>
         </datafield>
         <datafield tag="856" ind1="4" ind2="0">
             <subfield code="m">V:AT-OBV;B:AT-UBL</subfield>
             <subfield code="o">OBV-EDOC-VL</subfield>
             <subfield code="q">text/html</subfield>
-            <subfield code="u">https://resolver.obvsg.at/urn:nbn:at:at-ubl:3-10193</subfield>
+            <subfield code="u">https://resolver.obvsg.at/urn:nbn:at:at-ubl:3-13241</subfield>
             <subfield code="x">UBL</subfield>
             <subfield code="z">kostenfrei</subfield>
             <subfield code="3">Volltext</subfield>
         </datafield>
         <datafield tag="970" ind1="2" ind2=" ">
-            <subfield code="d">OA-ARTICLE</subfield>
+            <subfield code="d">OA-BOOKPART</subfield>
         </datafield>
         <datafield tag="970" ind1="9" ind2=" ">
             <subfield code="m">V:AT-OBV;B:AT-UBL</subfield>
             <subfield code="q">application/pdf</subfield>
-            <subfield code="u">http://media.obvsg.at/AC16411195-2001</subfield>
+            <subfield code="u">http://media.obvsg.at/AC16591204-2001</subfield>
             <subfield code="x">UBL</subfield>
             <subfield code="z">kostenfrei</subfield>
             <subfield code="3">Volltext</subfield>
         </datafield>
-        <datafield tag="971" ind1="5" ind2=" ">
-            <subfield code="a">Universität Linz</subfield>
-            <subfield code="b">Technisch-Naturwissenschaftliche Fakultät</subfield>
-            <subfield code="c">Institut für Angewandte Geometrie</subfield>
-            <subfield code="0">ioo:UL:TN:AG</subfield>
-        </datafield>
         <datafield tag="971" ind1="9" ind2=" ">
-            <subfield code="a">Tuttes's theorem / Mesh parameterization / Floater's parameterization / Plane near-triangulation</subfield>
+            <subfield code="a">Assistive technology / Non-Discrimination / Accessibility</subfield>
         </datafield>
     </record>
 </collection>
