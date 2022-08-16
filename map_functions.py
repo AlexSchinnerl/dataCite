@@ -2,6 +2,10 @@ import xml.etree.ElementTree as ET
 import re
 
 # Identifier -------------------------------------------------------------
+
+
+
+# Identifier -------------------------------------------------------------
 def create_identifier(output, record):
     '''Searches the 024 field'''
     identifierMRC = record.findall(".//datafield[@tag='024']")
@@ -115,17 +119,6 @@ def create_size(output, record):
 # Descriptions -------------------------------------------------------------
 def create_descriptions(output, record):
     descriptions = ET.Element("descriptions")
-    # ------------- Abstract
-    abstractMRC = record.findall(".//datafield[@tag='520']")
-    for item in abstractMRC:
-        description = ET.SubElement(descriptions, "description")
-        description.attrib = {"descriptionType":"Abstract"}
-        # cut "eng: " or "ger: " from abstract text
-        oldText = item.find("subfield[@code='a']").text
-        toCut = re.search("^eng: |^ger: ", oldText).group()
-        abstractText = oldText.replace(toCut, "")
-        description.text = abstractText
-
     # ------------- Series Information
     description = ET.SubElement(descriptions, "description")
     description.attrib = {"descriptionType":"SeriesInformation"}
@@ -145,6 +138,16 @@ def create_descriptions(output, record):
             + ", "
             + seriesInformationMRC.find("subfield[@code='v']").text
             )
+    # ------------- Abstract
+    abstractMRC = record.findall(".//datafield[@tag='520']")
+    for item in abstractMRC:
+        description = ET.SubElement(descriptions, "description")
+        description.attrib = {"descriptionType":"Abstract"}
+        # cut "eng: " or "ger: " from abstract text
+        oldText = item.find("subfield[@code='a']").text
+        toCut = re.search("^eng: |^ger: ", oldText).group()
+        abstractText = oldText.replace(toCut, "")
+        description.text = abstractText
 
     output.append(descriptions)
 
