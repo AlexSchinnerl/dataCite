@@ -12,20 +12,20 @@ def create_DCxml(record):
 
     # Dictionary to map functions to Alma Datafield
     tagsDict = {
-        "008":map_functions.create_date(output, record),
-        "024":map_functions.create_identifier(output, record),
-        "041":map_functions.create_language(output, record),
-        "100":map_functions.create_creator(output, record),
-        "245":map_functions.create_title(output, record),
-        "264":map_functions.create_publisher(output, record),
-        "300":map_functions.create_size(output, record),
-        "520":map_functions.create_descriptions(output, record),
-        "536":map_functions.create_fundingReference(output, record)
+        "008":map_functions.create_date,
+        "024":map_functions.create_identifier,
+        "041":map_functions.create_language,
+        "100":map_functions.create_creator,
+        "245":map_functions.create_title,
+        "264":map_functions.create_publisher,
+        "300":map_functions.create_size,
+        "520":map_functions.create_descriptions,
+        "536":map_functions.create_fundingReference
         }
     # if datafield is in Alma xml - run function
     for key in tagsDict:
         if record.find(".//datafield[@tag='{}']".format(key)) != None:
-            tagsDict[key]
+            tagsDict[key](output, record)
 
     # Functions with set values (Fields that are created with hard-coded value)
     map_functions.create_formats(output)
@@ -34,6 +34,10 @@ def create_DCxml(record):
 
     return output
 
+def write_log(record, text):
+    acNr = record.find(".//controlfield[@tag='009']").text
+    with open("log.txt", "a") as logFile:
+        logFile.write("{} - {}\n".format(acNr, text))
 
 def main():
     # Load Alma xml

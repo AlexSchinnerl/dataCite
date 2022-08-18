@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as ET
 import re
+from main import write_log
 
 # Date -------------------------------------------------------------
 def create_date(output, record):
@@ -44,7 +45,7 @@ def create_language(output, record):
     output.append(language)
 
 # Creators -------------------------------------------------------------
-def helper_create_creator(author, mainElement):
+def helper_create_creator(record, author, mainElement):
     creator = ET.SubElement(mainElement, "creator")
 
     creatorName = ET.SubElement(creator, "creatorName")
@@ -54,31 +55,29 @@ def helper_create_creator(author, mainElement):
     if len(author.find("subfield[@code='a']").text.split(",")) > 1: # catch index error (if no split: len=1)
         givenName = ET.SubElement(creator, "givenName")
         givenName.text = author.find("subfield[@code='a']").text.split(",")[1]
-
         familyName = ET.SubElement(creator, "familyName")
         familyName.text = author.find("subfield[@code='a']").text.split(",")[0]
     else:
+        textMsg = "Author does not contain ','"
+        write_log(record, textMsg)
         givenName = ET.SubElement(creator, "givenName")
         givenName.text = author.find("subfield[@code='a']").text.split(" ")[1]
-
         familyName = ET.SubElement(creator, "familyName")
         familyName.text = author.find("subfield[@code='a']").text.split(" ")[0]
 
-
-
-
 def create_creator(output, record):
-    main_authorMRC = record.find(".//datafield[@tag='100']")
     creators = ET.Element("creators")
 
-    # create main Author
-    helper_create_creator(main_authorMRC, creators)
+    if record.find(".//datafield[@tag='100']") != None:
+        # create main Author
+        main_authorMRC = record.find(".//datafield[@tag='100']")
+        helper_create_creator(record, main_authorMRC, creators)
     
     # create side-authors
     if record.findall(".//datafield[@tag='700']") != None:
         side_authorMRC = record.findall(".//datafield[@tag='700']")
         for author in side_authorMRC:
-            helper_create_creator(author, creators)
+            helper_create_creator(record, author, creators)
 
     output.append(creators)
 
@@ -162,7 +161,7 @@ def create_descriptions(output, record):
         description.attrib = {"descriptionType":"Abstract"}
         # cut "eng: " or "ger: " from abstract text
         oldText = item.find("subfield[@code='a']").text
-        toCut = re.search("^eng: |^ger: |^eng:|^ger:", oldText).group()
+        toCut = re.search("^eng: |^ger: |^eng:|^ger:", oldText).group() # search for eng: and ger: with and without space
         abstractText = oldText.replace(toCut, "")
         description.text = abstractText
 
