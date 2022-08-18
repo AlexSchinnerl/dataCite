@@ -49,6 +49,7 @@ def main():
         outputTree.write("output/output_{}.xml".format(acNr))
         print("created output_{}.xml".format(acNr))
         counter+=1
+        print(counter)
     print("completed {} files".format(counter))
 
 if __name__ == "__main__":

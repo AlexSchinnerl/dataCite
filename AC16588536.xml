@@ -1,0 +1,104 @@
+<collection>
+    <record>
+    <!--Feld 100 nicht vorhanden - trotzdem Fehler?
+
+      File "h:\programming\dataCite\map_functions.py", line 52, in helper_create_creator
+    creatorName.text = author.find("subfield[@code='a']").text
+AttributeError: 'NoneType' object has no attribute 'find'
+    
+    -->
+        <leader>01357naa#a2200325#c#4500</leader>
+        <controlfield tag="001">997044339203340</controlfield>
+        <controlfield tag="005">20220804110423.0</controlfield>
+        <controlfield tag="007">cr#|||||||||||</controlfield>
+        <controlfield tag="008">220802s2022####||||||||o|||||||||||eng|c</controlfield>
+        <controlfield tag="009">AC16588536</controlfield>
+        <datafield tag="024" ind1="7" ind2=" ">
+            <subfield code="a">urn:nbn:at:at-ubl:3-12843</subfield>
+            <subfield code="2">urn</subfield>
+        </datafield>
+        <datafield tag="035" ind1=" " ind2=" ">
+            <subfield code="a">(AT-OBV)AC16588536</subfield>
+        </datafield>
+        <datafield tag="035" ind1=" " ind2=" ">
+            <subfield code="a">(VLID)7945385</subfield>
+        </datafield>
+        <datafield tag="035" ind1=" " ind2=" ">
+            <subfield code="a">(DE-599)OBVAC16588536</subfield>
+        </datafield>
+        <datafield tag="035" ind1=" " ind2=" ">
+            <subfield code="a">(EXLNZ-43ACC_NETWORK)99146901177003331</subfield>
+        </datafield>
+        <datafield tag="040" ind1=" " ind2=" ">
+            <subfield code="a">AT-UBL</subfield>
+            <subfield code="b">ger</subfield>
+            <subfield code="d">AT-UBL</subfield>
+            <subfield code="e">rda</subfield>
+        </datafield>
+        <datafield tag="041" ind1=" " ind2=" ">
+            <subfield code="a">eng</subfield>
+        </datafield>
+        <datafield tag="044" ind1=" " ind2=" ">
+            <subfield code="c">XA-AT</subfield>
+        </datafield>
+        <datafield tag="245" ind1="0" ind2="0">
+            <subfield code="a">Towards a Mobile Application to Support Pre-School Teachers Observing Early Signs of Autism Spectrum Disorder</subfield>
+        </datafield>
+        <datafield tag="264" ind1=" " ind2="1">
+            <subfield code="a">Linz</subfield>
+            <subfield code="b">Association ICCHP</subfield>
+            <subfield code="c">2022</subfield>
+        </datafield>
+        <datafield tag="300" ind1=" " ind2=" ">
+            <subfield code="a">1 Online-Ressource</subfield>
+        </datafield>
+        <datafield tag="336" ind1=" " ind2=" ">
+            <subfield code="b">txt</subfield>
+        </datafield>
+        <datafield tag="337" ind1=" " ind2=" ">
+            <subfield code="b">c</subfield>
+        </datafield>
+        <datafield tag="338" ind1=" " ind2=" ">
+            <subfield code="b">cr</subfield>
+        </datafield>
+        <datafield tag="347" ind1=" " ind2=" ">
+            <subfield code="a">Textdatei</subfield>
+            <subfield code="b">PDF</subfield>
+        </datafield>
+        <datafield tag="506" ind1="0" ind2=" ">
+            <subfield code="f">Unrestricted online access</subfield>
+            <subfield code="2">star</subfield>
+        </datafield>
+        <datafield tag="540" ind1=" " ind2=" ">
+            <subfield code="f">CC BY 4.0</subfield>
+            <subfield code="u">https://creativecommons.org/licenses/by/4.0/deed.de</subfield>
+            <subfield code="2">cc</subfield>
+        </datafield>
+        <datafield tag="773" ind1="0" ind2="8">
+            <subfield code="i">Enthalten in</subfield>
+            <subfield code="t">ICCHP-AAATE 2022 Open Access Compendium "Assistive Technology, Accessibility and (e)Inclusion" Part I / Hoogerwerf, Evert-Jan ; Mavrou, Katerina</subfield>
+            <subfield code="d">Linz : Association ICCHP, 2022</subfield>
+            <subfield code="z">978-3-9504997-8-0</subfield>
+        </datafield>
+        <datafield tag="856" ind1="4" ind2="0">
+            <subfield code="m">V:AT-OBV;B:AT-UBL</subfield>
+            <subfield code="o">OBV-EDOC-VL</subfield>
+            <subfield code="q">text/html</subfield>
+            <subfield code="u">https://resolver.obvsg.at/urn:nbn:at:at-ubl:3-12843</subfield>
+            <subfield code="x">UBL</subfield>
+            <subfield code="z">kostenfrei</subfield>
+            <subfield code="3">Volltext</subfield>
+        </datafield>
+        <datafield tag="970" ind1="2" ind2=" ">
+            <subfield code="d">OA-BOOKPART</subfield>
+        </datafield>
+        <datafield tag="970" ind1="9" ind2=" ">
+            <subfield code="m">V:AT-OBV;B:AT-UBL</subfield>
+            <subfield code="q">application/pdf</subfield>
+            <subfield code="u">http://media.obvsg.at/AC16588536-2001</subfield>
+            <subfield code="x">UBL</subfield>
+            <subfield code="z">kostenfrei</subfield>
+            <subfield code="3">Volltext</subfield>
+        </datafield>
+    </record>
+</collection>

@@ -51,11 +51,20 @@ def helper_create_creator(author, mainElement):
     creatorName.attrib = {"nameType":"Personal"}
     creatorName.text = author.find("subfield[@code='a']").text
 
-    givenName = ET.SubElement(creator, "givenName")
-    givenName.text = author.find("subfield[@code='a']").text.split(",")[1]
+    if len(author.find("subfield[@code='a']").text.split(",")) > 1: # catch index error (if no split: len=1)
+        givenName = ET.SubElement(creator, "givenName")
+        givenName.text = author.find("subfield[@code='a']").text.split(",")[1]
 
-    familyName = ET.SubElement(creator, "familyName")
-    familyName.text = author.find("subfield[@code='a']").text.split(",")[0]
+        familyName = ET.SubElement(creator, "familyName")
+        familyName.text = author.find("subfield[@code='a']").text.split(",")[0]
+    else:
+        givenName = ET.SubElement(creator, "givenName")
+        givenName.text = author.find("subfield[@code='a']").text.split(" ")[1]
+
+        familyName = ET.SubElement(creator, "familyName")
+        familyName.text = author.find("subfield[@code='a']").text.split(" ")[0]
+
+
 
 
 def create_creator(output, record):
@@ -153,7 +162,7 @@ def create_descriptions(output, record):
         description.attrib = {"descriptionType":"Abstract"}
         # cut "eng: " or "ger: " from abstract text
         oldText = item.find("subfield[@code='a']").text
-        toCut = re.search("^eng: |^ger: ", oldText).group()
+        toCut = re.search("^eng: |^ger: |^eng:|^ger:", oldText).group()
         abstractText = oldText.replace(toCut, "")
         description.text = abstractText
 
@@ -188,7 +197,7 @@ def create_fundingReference(output, record):
 # RecourceType -------------------------------
 def create_resourceType(output):
     resourceType = ET.Element("resourceType")
-    resourceType.attrib = {"resourceTypeGeneral":"Text"}
+    resourceType.attrib = {"resourceTypeGeneral":"Conference paper"}
     # resourceType.text = " "
 
     output.append(resourceType)
