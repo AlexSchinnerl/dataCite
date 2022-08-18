@@ -55,8 +55,12 @@ def create_language(output, record):
 
 # Creators -------------------------------------------------------------
 def helper_create_creator(record, author, mainElement):
+    '''
+    Creates the single-creators to the creators element.
+    For each creator additionally a creatorName, givenName and familyName element is created.
+    Author Name is usually provided in datafield 100/700 subfield "a" (familyName, givenName)
+    '''
     creator = ET.SubElement(mainElement, "creator")
-
     creatorName = ET.SubElement(creator, "creatorName")
     creatorName.attrib = {"nameType":"Personal"}
     creatorName.text = author.find("subfield[@code='a']").text
@@ -70,7 +74,8 @@ def helper_create_creator(record, author, mainElement):
         # write log
         textMsg = "Author '{}' does not contain ','".format(author.find("subfield[@code='a']").text)
         write_log(record, textMsg)
-        if len(author.find("subfield[@code='a']").text.split(" ")) == 2: # check if name contains 2 words sep. by blank
+        # continue with split at blank
+        if len(author.find("subfield[@code='a']").text.split(" ")) == 2: # check if name contains 2 words sep. by blank (prevents wrong split in case of double name)
             givenName = ET.SubElement(creator, "givenName")
             givenName.text = author.find("subfield[@code='a']").text.split(" ")[1]
             familyName = ET.SubElement(creator, "familyName")
@@ -80,18 +85,18 @@ def helper_create_creator(record, author, mainElement):
             write_log(record, textMsg)
 
 def create_creator(output, record):
+    '''
+    Creates the creators element and fills it with the authors provided by datafield 100 and/or all 700s.
+    Uses the helper_create_creator function to create the creators subfields
+    '''
     if output.find("creators") == None: # check if creators already exists (100 and 700 both call create_creators)
         creators = ET.Element("creators")
         if record.find(".//datafield[@tag='100']") != None: # if 100 contains text creeate main author and check for side authors
             # create main Author
             main_authorMRC = record.find(".//datafield[@tag='100']")
             helper_create_creator(record, main_authorMRC, creators)
-            # create side-authors
-            if record.findall(".//datafield[@tag='700']") != None:
-                side_authorMRC = record.findall(".//datafield[@tag='700']")
-                for author in side_authorMRC:
-                    helper_create_creator(record, author, creators)
-        elif record.findall(".//datafield[@tag='700']") != None: # if 100 contains no text but 700 is not empty create side authors
+        # create side-authors
+        if record.findall(".//datafield[@tag='700']") != None:
             side_authorMRC = record.findall(".//datafield[@tag='700']")
             for author in side_authorMRC:
                 helper_create_creator(record, author, creators)
