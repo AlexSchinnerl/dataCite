@@ -4,7 +4,11 @@ from main import write_log
 
 # Date -------------------------------------------------------------
 def create_date(output, record):
-    '''Fills the Date Tag with the Date extracted from Alma 008 pos 0-5'''
+    '''
+    Takes controlfield 008 pos 0-5 (e.g. 220804) and builds a valid date (e.g. 2022-08-04)
+    Creates element dates and subelement date
+    Fills date text with created date
+    '''
     dateMRC = record.find(".//controlfield[@tag='008']")
     date_alma = re.search("^\d{6}", dateMRC.text).group()
     date_alma = "20"+date_alma[:2]+"-"+date_alma[2:4]+"-"+date_alma[4:]
@@ -16,7 +20,11 @@ def create_date(output, record):
 
 # Identifier -------------------------------------------------------------
 def create_identifier(output, record):
-    '''Searches the 024 field'''
+    '''
+    Finds all (repeatable) datafield 024 elements
+    If one of the fields contains a doi: element identifier is created and filled with the doi
+    All other found identifiers (e.g. urn) are pasted in the alternateIdentifiers element        
+    '''
     identifierMRC = record.findall(".//datafield[@tag='024']")
 
     for item in identifierMRC:
@@ -27,7 +35,7 @@ def create_identifier(output, record):
 
             output.append(identifier)
             
-        elif item.find("subfield[@code='2']").text == "urn":
+        else: #item.find("subfield[@code='2']").text == "urn":
             altidentifiers = ET.Element("alternateIdentifiers")
             altidentifier = ET.SubElement(altidentifiers, "alternateIdentifier")
             altidentifier.attrib = {"alternateIdentifierType":item.find("subfield[@code='2']").text}
@@ -37,11 +45,12 @@ def create_identifier(output, record):
 
 # Language -------------------------------------------------------------
 def create_language(output, record):
+    '''
+    Finds the datafield 041 element and pastes the language code (e.g. eng) in the language element    
+    '''
     languageMRC = record.find(".//datafield[@tag='041']")
-
     language = ET.Element("language")
     language.text = languageMRC.find("subfield[@code='a']").text
-
     output.append(language)
 
 # Creators -------------------------------------------------------------
@@ -58,28 +67,38 @@ def helper_create_creator(record, author, mainElement):
         familyName = ET.SubElement(creator, "familyName")
         familyName.text = author.find("subfield[@code='a']").text.split(",")[0]
     else:
-        textMsg = "Author does not contain ','"
+        # write log
+        textMsg = "Author '{}' does not contain ','".format(author.find("subfield[@code='a']").text)
         write_log(record, textMsg)
-        givenName = ET.SubElement(creator, "givenName")
-        givenName.text = author.find("subfield[@code='a']").text.split(" ")[1]
-        familyName = ET.SubElement(creator, "familyName")
-        familyName.text = author.find("subfield[@code='a']").text.split(" ")[0]
+        if len(author.find("subfield[@code='a']").text.split(" ")) == 2: # check if name contains 2 words sep. by blank
+            givenName = ET.SubElement(creator, "givenName")
+            givenName.text = author.find("subfield[@code='a']").text.split(" ")[1]
+            familyName = ET.SubElement(creator, "familyName")
+            familyName.text = author.find("subfield[@code='a']").text.split(" ")[0]
+        else:
+            textMsg = "Can not split '{}' no givenName and no familyName created".format(author.find("subfield[@code='a']").text)
+            write_log(record, textMsg)
 
 def create_creator(output, record):
-    creators = ET.Element("creators")
-
-    if record.find(".//datafield[@tag='100']") != None:
-        # create main Author
-        main_authorMRC = record.find(".//datafield[@tag='100']")
-        helper_create_creator(record, main_authorMRC, creators)
-    
-    # create side-authors
-    if record.findall(".//datafield[@tag='700']") != None:
-        side_authorMRC = record.findall(".//datafield[@tag='700']")
-        for author in side_authorMRC:
-            helper_create_creator(record, author, creators)
-
-    output.append(creators)
+    if output.find("creators") == None: # check if creators already exists (100 and 700 both call create_creators)
+        creators = ET.Element("creators")
+        if record.find(".//datafield[@tag='100']") != None: # if 100 contains text creeate main author and check for side authors
+            # create main Author
+            main_authorMRC = record.find(".//datafield[@tag='100']")
+            helper_create_creator(record, main_authorMRC, creators)
+            # create side-authors
+            if record.findall(".//datafield[@tag='700']") != None:
+                side_authorMRC = record.findall(".//datafield[@tag='700']")
+                for author in side_authorMRC:
+                    helper_create_creator(record, author, creators)
+        elif record.findall(".//datafield[@tag='700']") != None: # if 100 contains no text but 700 is not empty create side authors
+            side_authorMRC = record.findall(".//datafield[@tag='700']")
+            for author in side_authorMRC:
+                helper_create_creator(record, author, creators)
+        # else: # neither 100 nor 700 containing authors
+        #     textMsg = "Neither 100 nor 700 containing authors"
+        #     write_log(record, textMsg)
+        output.append(creators)
 
 # Titles -------------------------------------------------------------
 def create_title(output, record):

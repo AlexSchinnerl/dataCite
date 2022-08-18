@@ -20,7 +20,8 @@ def create_DCxml(record):
         "264":map_functions.create_publisher,
         "300":map_functions.create_size,
         "520":map_functions.create_descriptions,
-        "536":map_functions.create_fundingReference
+        "536":map_functions.create_fundingReference,
+        "700":map_functions.create_creator
         }
     # if datafield is in Alma xml - run function
     for key in tagsDict:
@@ -43,18 +44,27 @@ def main():
     # Load Alma xml
     tree = ET.parse("inputFile.xml")
     collection = tree.getroot()
+    #clear log file
+    open("log.txt", "w").close()
+    # go through all records in collection    
     counter = 0
     for record in collection:
         output = create_DCxml(record)
-        # create tree ---------------------------------------------------
+        # create tree
         outputTree = ET.ElementTree(output)
-        # write output--------------------------------------------------------------
+        # write output
         acNr = record.find(".//controlfield[@tag='009']").text
         outputTree.write("output/output_{}.xml".format(acNr))
         print("created output_{}.xml".format(acNr))
         counter+=1
-        print(counter)
+        # print(counter)
+    
     print("completed {} files".format(counter))
+    # count content in log file
+    errorCount = 0
+    with open("log.txt") as log:
+        errorCount = len(log.readlines())
+    print("{} records with errors - see log file".format(errorCount))
 
 if __name__ == "__main__":
     main()

@@ -45,11 +45,6 @@ Replace the content of the inputFile.xml with your exported File and run the mai
 # ToDo
 * Doku in File (functions)
 
-
-Offene Frage: Welches Datafield, bzw. Subfield kann einmal nicht vorhanden sein, welches ist immer da?
-
-Subfelder ´, die nicht vorhanden sein können abfangen...
-
 ## NiceToHave
 * ``formats > format``
     * Wird im Moment mit "PDF" befüllt. Alternativ auch aus 347er subfield "b"
