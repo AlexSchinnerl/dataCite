@@ -43,8 +43,7 @@ Stores all functionions needed to map a datafield from the input file to the out
 Replace the content of the inputFile.xml with your exported File and run the main.py file. The produced output is stored in the output folder.
 
 # ToDo
-* Doku in File (functions)
-
+* Finish readme
 ## NiceToHave
 * ``formats > format``
     * Wird im Moment mit "PDF" befüllt. Alternativ auch aus 347er subfield "b"

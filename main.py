@@ -2,6 +2,11 @@ import xml.etree.ElementTree as ET
 import map_functions
 
 def create_DCxml(record):
+    '''
+    Creates output root element 'resource'
+    Goes through a Dictionary of datafield tags and starts the corresponding function
+    Afterwards the functions not associated with a specific datafield are executed
+    '''
     # create output root
     output = ET.Element("resource")
     output.attrib = {
@@ -9,7 +14,6 @@ def create_DCxml(record):
         "xsi:schemaLocation": "http://datacite.org/schema/kernel-4 https://schema.datacite.org/meta/kernel-4.4/metadata.xsd",
         "xmlns":"http://datacite.org/schema/kernel-4"
         }
-
     # Dictionary to map functions to Alma Datafield
     tagsDict = {
         "008":map_functions.create_date,
@@ -27,20 +31,22 @@ def create_DCxml(record):
     for key in tagsDict:
         if record.find(".//datafield[@tag='{}']".format(key)) != None:
             tagsDict[key](output, record)
-
-    # Functions with set values (Fields that are created with hard-coded value)
+    # functions with set values (fields that are created with default value)
     map_functions.create_formats(output)
     map_functions.create_resourceType(output)
     map_functions.create_rights(output)
-
     return output
 
 def write_log(record, text):
+    '''Append to logfile'''
     acNr = record.find(".//controlfield[@tag='009']").text
     with open("output/log.txt", "a") as logFile:
         logFile.write("{} - {}\n".format(acNr, text))
 
 def main():
+    '''
+    Loads the input xml file (Alma export) and starts for each record in collection the create_DCxml function.
+    '''
     # Load Alma xml
     tree = ET.parse("inputFile.xml")
     collection = tree.getroot()
