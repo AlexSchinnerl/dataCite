@@ -37,7 +37,7 @@ def create_DCxml(record):
 
 def write_log(record, text):
     acNr = record.find(".//controlfield[@tag='009']").text
-    with open("log.txt", "a") as logFile:
+    with open("output/log.txt", "a") as logFile:
         logFile.write("{} - {}\n".format(acNr, text))
 
 def main():
@@ -45,7 +45,7 @@ def main():
     tree = ET.parse("inputFile.xml")
     collection = tree.getroot()
     #clear log file
-    open("log.txt", "w").close()
+    open("output/log.txt", "w").close()
     # go through all records in collection    
     counter = 0
     for record in collection:
@@ -62,7 +62,7 @@ def main():
     print("completed {} files".format(counter))
     # count content in log file
     errorCount = 0
-    with open("log.txt") as log:
+    with open("output/log.txt") as log:
         errorCount = len(log.readlines())
     print("{} records with errors - see log file".format(errorCount))
 
