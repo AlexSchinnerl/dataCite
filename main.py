@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as ET
 import map_functions
+import testingRecord
 
 def create_DCxml(record):
     '''
@@ -26,6 +27,7 @@ def create_DCxml(record):
         "347":map_functions.create_formats,
         "520":map_functions.create_descriptions,
         "536":map_functions.create_fundingReference,
+        "540":map_functions.create_rights,
         "700":map_functions.create_creator,
         "970":map_functions.create_resourceType
         }
@@ -35,19 +37,11 @@ def create_DCxml(record):
             tagsDict[key](output, record)
         elif record.find(".//datafield[@tag='{}']".format(key)) != None:
             tagsDict[key](output, record)
-    # functions with set values (fields that are created with default value)
-    map_functions.create_rights(output)
     return output
-
-def write_log(record, text):
-    '''Append to logfile'''
-    acNr = record.find(".//controlfield[@tag='009']").text
-    with open("output/log.txt", "a") as logFile:
-        logFile.write("{} - {}\n".format(acNr, text))
 
 def main():
     '''
-    Loads the input xml file (Alma export) and starts for each record in collection the create_DCxml function.
+    Loads the input xml file (Alma export), checks if mandatory fields are present and starts for each record in collection the create_DCxml function.
     '''
     # Load Alma xml
     tree = ET.parse("inputFile.xml")
@@ -57,6 +51,7 @@ def main():
     # go through all records in collection    
     counter = 0
     for record in collection:
+        testingRecord.check_mandatory_fields(record)
         output = create_DCxml(record)
         # create tree
         outputTree = ET.ElementTree(output)
@@ -72,7 +67,7 @@ def main():
     errorCount = 0
     with open("output/log.txt") as log:
         errorCount = len(log.readlines())
-    print("{} records with caveats - see log file".format(errorCount))
+    print("{} caveats - see log file".format(errorCount))
 
 if __name__ == "__main__":
     main()

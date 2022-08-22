@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 import re
-from main import write_log
+import testingRecord
 
 # Date -------------------------------------------------------------
 def create_date(output, record):
@@ -26,13 +26,10 @@ def create_identifier(output, record):
     All other found identifiers (e.g. urn) are pasted in the alternateIdentifiers element        
     '''
     identifierMRC = record.findall(".//datafield[@tag='024']")
-    check_for_doi = False
-
     for item in identifierMRC:
         if item.find("subfield[@code='2']").text == "doi":
             identifier = ET.Element("identifier", attrib={"identifierType":"DOI"})
             identifier.text = item.find("subfield[@code='a']").text
-            check_for_doi = True # checks if a doi is present
             output.append(identifier)
             
         else:
@@ -42,10 +39,6 @@ def create_identifier(output, record):
 
             output.append(altidentifiers)
     
-    if check_for_doi == False:
-        textMsg = "No DOI in record"
-        write_log(record, textMsg)
-
 # Language -------------------------------------------------------------
 def create_language(output, record):
     '''
@@ -75,7 +68,7 @@ def helper_create_creator(record, author, mainElement):
     else:
         # write log
         textMsg = "Author '{}' does not contain ','".format(author.find("subfield[@code='a']").text)
-        write_log(record, textMsg)
+        testingRecord.write_log(record, textMsg)
         # continue with split at blank
         if len(author.find("subfield[@code='a']").text.split(" ")) == 2: # check if name contains 2 words sep. by blank (prevents wrong split in case of double name)
             givenName = ET.SubElement(creator, "givenName")
@@ -84,7 +77,7 @@ def helper_create_creator(record, author, mainElement):
             familyName.text = author.find("subfield[@code='a']").text.split(" ")[0]
         else:
             textMsg = "Can not split '{}' no givenName and no familyName created".format(author.find("subfield[@code='a']").text)
-            write_log(record, textMsg)
+            testingRecord.write_log(record, textMsg)
 
 def create_creator(output, record):
     '''
@@ -243,8 +236,29 @@ def create_fundingReference(output, record):
                     funderIdentifier.text = funderDict[funder][1]
         else:
             textMsg = "Funder {} not in Funder Dictionary".format(item.find(("subfield[@code='a']")).text)
-            write_log(record, textMsg)
+            testingRecord.write_log(record, textMsg)
     output.append(fundingReferences)
+
+# Rights -------------------------------------------------------------
+def create_rights(output, record):
+    '''
+    Creates rightsList element and subelement rights.
+    Fills attributes with the data from datafield 540 subfield f and creates a fitting URL to the corresponding creativecommons.org/licenses site
+    '''
+    rightsList = ET.Element("rightsList")
+    rights = ET.SubElement(rightsList, "rights")
+    rightsMRC = record.find(".//datafield[@tag='540']")
+    rightsIdentifier = rightsMRC.find("subfield[@code='f']").text
+    rightsURL = rightsMRC.find("subfield[@code='u']").text
+    rightsURL =  "https://creativecommons.org/licenses/{}/{}/legalcode".format(
+        rightsIdentifier.split(" ")[1].lower(),
+        rightsIdentifier.split(" ")[2]
+        )
+    rights.attrib = {
+        "rightsIdentifier":rightsIdentifier,
+        "rightsURI":rightsURL
+        }
+    output.append(rightsList)
 
 # RecourceType -------------------------------------------------------------
 def create_resourceType(output, record):
@@ -265,19 +279,6 @@ def create_resourceType(output, record):
                 resourceType.attrib = {"resourceTypeGeneral":resTypeDict[resType]}
     else:
         textMsg = "Resource Type {} not in Resource Type Dictionary".format(resTypeMRC.find("subfield[@code='d']").text)
-        write_log(record, textMsg)    
+        testingRecord.write_log(record, textMsg)    
     # resourceType.text = " "
     output.append(resourceType)
-
-# ------------------------------- Fields with fixed Value ------------------------------   
-# Rights -------------------------------
-def create_rights(output):
-    '''
-    Creates rightsList element and subelement rights.
-    Default attributes are: rightsIdentifier="CC BY 4.0" rightsURI="https://creativecommons.org/licenses/by/4.0/legalcode"
-    Alternatively can be filled with datafield 540 subfield 'f' (rightsIdentifier) and subfield 'u' (rightsURI) - but the URL in subfield 'u' is different.
-    '''
-    rightsList = ET.Element("rightsList")
-    rights = ET.SubElement(rightsList, "rights", attrib={"rightsIdentifier":"CC BY 4.0", "rightsURI":"https://creativecommons.org/licenses/by/4.0/legalcode"})
-    # rights.text = " "
-    output.append(rightsList)
