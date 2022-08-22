@@ -26,20 +26,25 @@ def create_identifier(output, record):
     All other found identifiers (e.g. urn) are pasted in the alternateIdentifiers element        
     '''
     identifierMRC = record.findall(".//datafield[@tag='024']")
+    check_for_doi = False
 
     for item in identifierMRC:
         if item.find("subfield[@code='2']").text == "doi":
             identifier = ET.Element("identifier", attrib={"identifierType":"DOI"})
             identifier.text = item.find("subfield[@code='a']").text
-
+            check_for_doi = True # checks if a doi is present
             output.append(identifier)
             
-        else: #item.find("subfield[@code='2']").text == "urn":
+        else:
             altidentifiers = ET.Element("alternateIdentifiers")
             altidentifier = ET.SubElement(altidentifiers, "alternateIdentifier", attrib={"alternateIdentifierType":item.find("subfield[@code='2']").text})
             altidentifier.text = item.find("subfield[@code='a']").text
 
             output.append(altidentifiers)
+    
+    if check_for_doi == False:
+        textMsg = "No DOI in record"
+        write_log(record, textMsg)
 
 # Language -------------------------------------------------------------
 def create_language(output, record):
