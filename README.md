@@ -43,12 +43,3 @@ Stores all functionions needed to map a datafield from the input file to the out
 
 ### testingRecord
 Hold a function to test if mandatory fields are present in the input file and one to write caveats in the logfile
-
-# ToDo
-
-## NiceToHave
-```
-<rightsList> <rights>
-```
-* Wird standardmäßig mit "CC BY 4.0 " und fixer URL befüllt. Alternativ: 540er subfield "f" und subfield "u" (hat aber leider eine andere URL)
-
