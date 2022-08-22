@@ -1,6 +1,6 @@
-AC16588553 - No DOI found in File
-AC16588559 - No DOI found in File
-AC16588536 - No DOI found in File
+AC16588553 - No DOI in record
+AC16588559 - No DOI in record
+AC16588536 - No DOI in record
 AC16591213 - Author 'Desideri Lorenzo' does not contain ','
 AC16591234 - Author 'Mavrou Katerina' does not contain ','
 AC16591202 - Author 'Nasrudin' does not contain ','

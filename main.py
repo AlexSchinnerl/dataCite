@@ -25,7 +25,8 @@ def create_DCxml(record):
         "300":map_functions.create_size,
         "520":map_functions.create_descriptions,
         "536":map_functions.create_fundingReference,
-        "700":map_functions.create_creator
+        "700":map_functions.create_creator,
+        "970":map_functions.create_resourceType
         }
     # if datafield is in Alma xml - run function
     for key in tagsDict:
@@ -33,7 +34,6 @@ def create_DCxml(record):
             tagsDict[key](output, record)
     # functions with set values (fields that are created with default value)
     map_functions.create_formats(output)
-    map_functions.create_resourceType(output)
     map_functions.create_rights(output)
     return output
 

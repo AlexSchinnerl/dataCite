@@ -224,7 +224,7 @@ def create_fundingReference(output, record):
         awardNumber = ET.SubElement(fundingReference, "awardNumber")
         awardNumber.text = item.find(("subfield[@code='f']")).text
         # translation from funder in subfield 'a' to funderName and funderIdentifier
-        if item.find(("subfield[@code='a']")).text in funderDict: # check 
+        if item.find(("subfield[@code='a']")).text in funderDict: # check if funder in funder Dictionary
             for funder in funderDict:
                 if item.find(("subfield[@code='a']")).text == funder:
                     funderName.text = funderDict[funder][0]
@@ -234,16 +234,30 @@ def create_fundingReference(output, record):
             write_log(record, textMsg)
     output.append(fundingReferences)
 
-# ------------------------------- Fields with fixed Value ------------------------------
-# RecourceType -------------------------------
-def create_resourceType(output):
+# RecourceType -------------------------------------------------------------
+def create_resourceType(output, record):
     '''
-    Creates the resourceType with predefined attribute (e.g. ConferencePaper, Text)
+    Creates the resourceType and fills attribute resourceTypeGeneral with translated Information from datafield 970 ind1: 2 subfield d
     '''
-    resourceType = ET.Element("resourceType", attrib={"resourceTypeGeneral":"ConferencePaper"})
+    resTypeDict = {
+        "OA-BOOKPART":"ConferencePaper",
+        "OA-MONOGRAPH":"Report",
+        "OA-ARTICLE":"JournalArticle"
+    }
+    resTypeMRC = record.find(".//datafield[@tag='970'][@ind1='2']")
+    resourceType = ET.Element("resourceType")
+
+    if resTypeMRC.find("subfield[@code='d']").text in resTypeDict:
+        for resType in resTypeDict:
+            if resTypeMRC.find("subfield[@code='d']").text == resType:
+                resourceType.attrib = {"resourceTypeGeneral":resTypeDict[resType]}
+    else:
+        textMsg = "Resource Type {} not in Resource Type Dictionary".format(resTypeMRC.find("subfield[@code='d']").text)
+        write_log(record, textMsg)    
     # resourceType.text = " "
     output.append(resourceType)
 
+# ------------------------------- Fields with fixed Value ------------------------------
 # Formats -------------------------------
 def create_formats(output):
     '''
