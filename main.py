@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 import map_functions
-import testingRecord
+from testingRecord import check_mandatory_fields
 
 def create_DCxml(record):
     '''
@@ -51,7 +51,7 @@ def main():
     # go through all records in collection    
     counter = 0
     for record in collection:
-        testingRecord.check_mandatory_fields(record)
+        check_mandatory_fields(record)
         output = create_DCxml(record)
         # create tree
         outputTree = ET.ElementTree(output)

@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 import re
-import testingRecord
+from testingRecord import write_log
 
 # Date -------------------------------------------------------------
 def create_date(output, record):
@@ -68,7 +68,7 @@ def helper_create_creator(record, author, mainElement):
     else:
         # write log
         textMsg = "Author '{}' does not contain ','".format(author.find("subfield[@code='a']").text)
-        testingRecord.write_log(record, textMsg)
+        write_log(record, textMsg)
         # continue with split at blank
         if len(author.find("subfield[@code='a']").text.split(" ")) == 2: # check if name contains 2 words sep. by blank (prevents wrong split in case of double name)
             givenName = ET.SubElement(creator, "givenName")
@@ -77,7 +77,7 @@ def helper_create_creator(record, author, mainElement):
             familyName.text = author.find("subfield[@code='a']").text.split(" ")[0]
         else:
             textMsg = "Can not split '{}' no givenName and no familyName created".format(author.find("subfield[@code='a']").text)
-            testingRecord.write_log(record, textMsg)
+            write_log(record, textMsg)
 
 def create_creator(output, record):
     '''
@@ -95,9 +95,6 @@ def create_creator(output, record):
             side_authorMRC = record.findall(".//datafield[@tag='700']")
             for author in side_authorMRC:
                 helper_create_creator(record, author, creators)
-        # else: # neither 100 nor 700 containing authors
-        #     textMsg = "Neither 100 nor 700 containing authors"
-        #     write_log(record, textMsg)
         output.append(creators)
 
 # Titles -------------------------------------------------------------
@@ -236,7 +233,7 @@ def create_fundingReference(output, record):
                     funderIdentifier.text = funderDict[funder][1]
         else:
             textMsg = "Funder {} not in Funder Dictionary".format(item.find(("subfield[@code='a']")).text)
-            testingRecord.write_log(record, textMsg)
+            write_log(record, textMsg)
     output.append(fundingReferences)
 
 # Rights -------------------------------------------------------------
@@ -279,6 +276,6 @@ def create_resourceType(output, record):
                 resourceType.attrib = {"resourceTypeGeneral":resTypeDict[resType]}
     else:
         textMsg = "Resource Type {} not in Resource Type Dictionary".format(resTypeMRC.find("subfield[@code='d']").text)
-        testingRecord.write_log(record, textMsg)    
+        write_log(record, textMsg)    
     # resourceType.text = " "
     output.append(resourceType)

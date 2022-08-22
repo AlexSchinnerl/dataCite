@@ -1,8 +1,2 @@
-AC16588553 - No DOI in record
-AC16588559 - No DOI in record
-AC16588536 - No DOI in record
-AC16588536 - No author (datafield 100 or datafield 700) in record
-AC16591213 - Author 'Desideri Lorenzo' does not contain ','
-AC16591234 - Author 'Mavrou Katerina' does not contain ','
 AC16591202 - Author 'Nasrudin' does not contain ','
 AC16591202 - Can not split 'Nasrudin' no givenName and no familyName created
