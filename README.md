@@ -3,13 +3,12 @@
 We got a xml from an Alma export and want to transform it in a xml file suitable for uploading to the dataCite Website.
 
 ## How it works
-The programm takes an Alma export file as input and it is basically searching for a specific datafield tag in the xml Tree. Then take the information of the field (text, attributes, ...) an asign them to a xml tag corresponding to the template needed to upload the xml at the dataCite website.
+The programm takes an Alma export file as input and searches for a specific field tag in the xml tree. Then take the information of the field (text, attributes, ...) an asign them to a xml tag corresponding to the template needed to upload at the dataCite website.
 
 <u>Note!</u> Some Fields are filled with features, specially tailored to meet the needs of the JKU and would need adaptation if used in a different university.
 
-## Libraries
-* xml.etree.ElementTree
-* re
+# How to run
+Replace the content of the inputFile.xml with your exported file and run the main.py. The produced output and a logFile containing some caveats is stored in the output folder.
 
 # Files
 ## xml Files
@@ -39,14 +38,9 @@ Contains the main method, where the input file is loaded and for each provided r
 ### map_functions
 Stores all functionions needed to map a datafield from the input file to the output xml.
 
-# How to run
-Replace the content of the inputFile.xml with your exported File and run the main.py file. The produced output is stored in the output folder.
-
 # ToDo
 * Finish readme
 ## NiceToHave
-* ``formats > format``
-    * Wird im Moment mit "PDF" befüllt. Alternativ auch aus 347er subfield "b"
 * ``rightsList> rights ``
     * Wird standardmäßig mit "CC BY 4.0 " und fixer URL befüllt. Alternativ: 540er subfield "f" und subfield "u" (hat aber leider eine andere URL)
-        
+

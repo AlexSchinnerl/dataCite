@@ -23,6 +23,7 @@ def create_DCxml(record):
         "245":map_functions.create_title,
         "264":map_functions.create_publisher,
         "300":map_functions.create_size,
+        "347":map_functions.create_formats,
         "520":map_functions.create_descriptions,
         "536":map_functions.create_fundingReference,
         "700":map_functions.create_creator,
@@ -30,10 +31,11 @@ def create_DCxml(record):
         }
     # if datafield is in Alma xml - run function
     for key in tagsDict:
-        if record.find(".//datafield[@tag='{}']".format(key)) != None:
+        if record.find(".//controlfield[@tag='{}']".format(key)) != None:
+            tagsDict[key](output, record)
+        elif record.find(".//datafield[@tag='{}']".format(key)) != None:
             tagsDict[key](output, record)
     # functions with set values (fields that are created with default value)
-    map_functions.create_formats(output)
     map_functions.create_rights(output)
     return output
 
@@ -70,7 +72,7 @@ def main():
     errorCount = 0
     with open("output/log.txt") as log:
         errorCount = len(log.readlines())
-    print("{} records with errors - see log file".format(errorCount))
+    print("{} records with caveats - see log file".format(errorCount))
 
 if __name__ == "__main__":
     main()

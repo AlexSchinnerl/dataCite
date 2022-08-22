@@ -163,6 +163,18 @@ def create_size(output, record):
         # size.text = record.find(".//datafield[@tag='300']").find("subfield[@code='a']").text
     output.append(sizes)
 
+# Formats -------------------------------------------------------------
+def create_formats(output, record):
+    '''
+    Creates formats element and subelement format.
+    Fills element with default text "PDF" (alternatively datafield 347 subfield 'b' could be used)
+    '''
+    formatMRC = record.find(".//datafield[@tag='347']")
+    formats = ET.Element("formats")
+    formatDC = ET.SubElement(formats, "format")
+    formatDC.text = formatMRC.find("subfield[@code='b']").text
+    output.append(formats)
+
 # Descriptions -------------------------------------------------------------
 def create_descriptions(output, record):
     '''
@@ -257,18 +269,7 @@ def create_resourceType(output, record):
     # resourceType.text = " "
     output.append(resourceType)
 
-# ------------------------------- Fields with fixed Value ------------------------------
-# Formats -------------------------------
-def create_formats(output):
-    '''
-    Creates formats element and subelement format.
-    Fills element with default text "PDF" (alternatively datafield 347 subfield 'b' could be used)
-    '''
-    formats = ET.Element("formats")
-    formatDC = ET.SubElement(formats, "format")
-    formatDC.text = "PDF"
-    output.append(formats)
-    
+# ------------------------------- Fields with fixed Value ------------------------------   
 # Rights -------------------------------
 def create_rights(output):
     '''
