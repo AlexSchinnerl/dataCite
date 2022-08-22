@@ -8,7 +8,7 @@ The programm takes an Alma export file as input and searches for a specific fiel
 <u>Note!</u> Some Fields are filled with features, specially tailored to meet the needs of the JKU and would need adaptation if used in a different university.
 
 # How to run
-* Export bibliographic records from Alma
+* Export bibliographic records from Alma (Admin > Run a Job > Export Bibliographic records)
 * Replace the content of the `inputFile.xml` with your exported file
 * Execute `main.py`.
 

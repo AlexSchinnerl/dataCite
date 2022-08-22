@@ -6,7 +6,6 @@ def create_DCxml(record):
     '''
     Creates output root element 'resource'
     Goes through a Dictionary of datafield tags and starts the corresponding function
-    Afterwards the functions not associated with a specific datafield are executed
     '''
     # create output root
     output = ET.Element("resource")
