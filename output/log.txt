@@ -1,2 +1,0 @@
-AC16591202 - Author 'Nasrudin' does not contain ','
-AC16591202 - Can not split 'Nasrudin' no givenName and no familyName created
