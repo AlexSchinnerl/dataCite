@@ -5,7 +5,7 @@ We got a xml from an Alma export and want to transform it in a xml file suitable
 ## How it works
 The programm takes an Alma export file as input and searches for a specific field tag in the xml tree. Then take the information of the field (text, attributes, ...) an asign them to a xml tag corresponding to the template needed to upload at the dataCite website.
 
-<u>Note!</u> Some Fields are filled with features, specially tailored to meet the needs of the JKU and would need adaptation if used in a different university.
+**Note!** Some Fields are filled with features, specially tailored to meet the needs of the JKU and would need adaptation if used in a different university.
 
 # How to run
 * Export bibliographic records from Alma (Admin > Run a Job > Export Bibliographic records)
