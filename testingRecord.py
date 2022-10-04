@@ -8,8 +8,12 @@ def check_mandatory_fields(record):
     # check for DOI:
     check_for_doi = False
     for item in record.findall(".//datafield[@tag='024']"): # checks if doi is in any 024
-        if item.find("subfield[@code='2']").text == "doi":
-            check_for_doi = True
+        if item.find("subfield[@code='2']") == None:
+            textMsg = "No Subfield '2' in 024"
+            write_log(record, textMsg)
+        else:
+            if item.find("subfield[@code='2']").text == "doi":
+                check_for_doi = True
     if check_for_doi == False:
         textMsg = "No DOI in record"
         # print(textMsg)

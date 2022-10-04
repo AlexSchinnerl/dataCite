@@ -27,17 +27,18 @@ def create_identifier(output, record):
     '''
     identifierMRC = record.findall(".//datafield[@tag='024']")
     for item in identifierMRC:
-        if item.find("subfield[@code='2']").text == "doi":
-            identifier = ET.Element("identifier", attrib={"identifierType":"DOI"})
-            identifier.text = item.find("subfield[@code='a']").text
-            output.append(identifier)
-            
-        else:
-            altidentifiers = ET.Element("alternateIdentifiers")
-            altidentifier = ET.SubElement(altidentifiers, "alternateIdentifier", attrib={"alternateIdentifierType":item.find("subfield[@code='2']").text})
-            altidentifier.text = item.find("subfield[@code='a']").text
+        if item.find("subfield[@code='2']") != None:
+            if item.find("subfield[@code='2']").text == "doi":
+                identifier = ET.Element("identifier", attrib={"identifierType":"DOI"})
+                identifier.text = item.find("subfield[@code='a']").text
+                output.append(identifier)
+                
+            else:
+                altidentifiers = ET.Element("alternateIdentifiers")
+                altidentifier = ET.SubElement(altidentifiers, "alternateIdentifier", attrib={"alternateIdentifierType":item.find("subfield[@code='2']").text})
+                altidentifier.text = item.find("subfield[@code='a']").text
 
-            output.append(altidentifiers)
+                output.append(altidentifiers)
     
 # Language -------------------------------------------------------------
 def create_language(output, record):
