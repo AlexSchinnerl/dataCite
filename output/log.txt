@@ -1,0 +1,4 @@
+AC16650665 - No DOI in record
+AC16650665 - No author (datafield 100 or datafield 700) in record
+AC16650690 - No author (datafield 100 or datafield 700) in record
+AC16650674 - Missing Subfield '2' in 024
