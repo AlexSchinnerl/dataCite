@@ -5,31 +5,27 @@ def write_log(record, text):
         logFile.write("{} - {}\n".format(acNr, text))
 
 
-def check_subfields(record, subfieldcode, datafieldtag):
-    noMissingSubfield = False
-    for item in record.findall(f".//datafield[@tag='{datafieldtag}']"): 
-        if item.find(f"subfield[@code='{subfieldcode}']") == None:
-            textMsg = f"Missing Subfield '{subfieldcode}' in {datafieldtag}"
-            write_log(record, textMsg)
-        else:            
-            noMissingSubfield = True
-    return noMissingSubfield
+# def check_subfields(record, subfieldcode, datafieldtag):
+#     missingSubfield = False
+#     if record.find(f"subfield[@code='{subfieldcode}']") == None:
+#         # textMsg = f"Missing Subfield '{subfieldcode}' in {datafieldtag}"
+#         missingSubfield = True
+#     return missingSubfield
 
 def check_mandatory_fields(record):
-    print("Processing:")
-    print(record.find(".//controlfield[@tag='009']").text)
+    acNr = record.find(".//controlfield[@tag='009']").text
+    print(f"Processing: {acNr}")
     # check for DOI:
-    subfield_check = check_subfields(record, subfieldcode="2", datafieldtag="024")
-    print(subfield_check)
-    if subfield_check == True:
-        print("SF check")
-    #     for item in record.findall(".//datafield[@tag='024']"): # checks if doi is in any 024
-    #         if item.find("subfield[@code='2']").text == "doi":
-    #             check_for_doi = True
     check_for_doi = False
-    for item in record.findall(".//datafield[@tag='024']"): # checks if doi is in any 024
-        if item.find("subfield[@code='2']").text == "doi":
-            check_for_doi = True
+    for item in record.findall(".//datafield[@tag='024']"):
+        # subfield_check = check_subfields(record=item, subfieldcode="2", datafieldtag="024")
+        if item.find("subfield[@code='2']") == None:
+            textMsg = "Missing subfield '2' in datafield 024"
+            write_log(record, textMsg)          
+        else:
+            # checks if doi is in any 024
+            if item.find("subfield[@code='2']").text == "doi":
+                check_for_doi = True
 
     if check_for_doi == False:
         textMsg = "No DOI in record"
