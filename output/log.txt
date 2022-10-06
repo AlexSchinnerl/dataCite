@@ -1,5 +1,0 @@
-AC16650665 - No DOI in record
-AC16650665 - No author (datafield 100 or datafield 700) in record
-AC16650690 - No author (datafield 100 or datafield 700) in record
-AC16650674 - Missing subfield '2' in datafield 024
-AC16650674 - No DOI in record

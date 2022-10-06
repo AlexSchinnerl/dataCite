@@ -5,12 +5,13 @@ def write_log(record, text):
         logFile.write("{} - {}\n".format(acNr, text))
 
 
-# def check_subfields(record, subfieldcode, datafieldtag):
-#     missingSubfield = False
-#     if record.find(f"subfield[@code='{subfieldcode}']") == None:
-#         # textMsg = f"Missing Subfield '{subfieldcode}' in {datafieldtag}"
-#         missingSubfield = True
-#     return missingSubfield
+def check_subfields(datafield, subfieldcode, datafieldtag):
+    missingSubfield = False
+    textMsg = ""
+    if datafield.find(f"subfield[@code='{subfieldcode}']") == None:
+        textMsg = f"Missing Subfield '{subfieldcode}' in {datafieldtag}"
+        missingSubfield = True
+    return missingSubfield, textMsg
 
 def check_mandatory_fields(record):
     acNr = record.find(".//controlfield[@tag='009']").text
@@ -18,10 +19,9 @@ def check_mandatory_fields(record):
     # check for DOI:
     check_for_doi = False
     for item in record.findall(".//datafield[@tag='024']"):
-        # subfield_check = check_subfields(record=item, subfieldcode="2", datafieldtag="024")
-        if item.find("subfield[@code='2']") == None:
-            textMsg = "Missing subfield '2' in datafield 024"
-            write_log(record, textMsg)          
+        subfield_check, textMsg = check_subfields(datafield=item, subfieldcode="2", datafieldtag="024")
+        if subfield_check == True:
+            write_log(record, textMsg)    
         else:
             # checks if doi is in any 024
             if item.find("subfield[@code='2']").text == "doi":
