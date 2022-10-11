@@ -255,14 +255,6 @@
         <controlfield tag="007">cr#|||||||||||</controlfield>
         <controlfield tag="008">220926s2022    ||||||||o|||||||||||eng|c</controlfield>
         <controlfield tag="009">AC16650668</controlfield>
-        <datafield tag="024" ind1="7" ind2=" ">
-            <subfield code="a">urn:nbn:at:at-ubl:3-14840</subfield>
-            <subfield code="2">urn</subfield>
-        </datafield>
-        <datafield tag="024" ind1="7" ind2=" ">
-            <subfield code="a">10.35011/IDIMT-2022-153</subfield>
-            <subfield code="2">doi</subfield>
-        </datafield>
         <datafield tag="035" ind1=" " ind2=" ">
             <subfield code="a">(AT-OBV)AC16650668</subfield>
         </datafield>

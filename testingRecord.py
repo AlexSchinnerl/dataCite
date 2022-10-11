@@ -17,18 +17,7 @@ def subfield_check(datafield, subfieldCode, record):
     return missingSubfield
 
 
-def check_subfields(datafield, subfieldcode, datafieldtag):
-    missingSubfield = False
-    textMsg = ""
-    if datafield.find(f"subfield[@code='{subfieldcode}']") is None:
-        textMsg = f"Missing Subfield '{subfieldcode}' in {datafieldtag}"
-        missingSubfield = True
-    return missingSubfield, textMsg
-
-
 # check 024
-
-
 
 
 
@@ -44,6 +33,7 @@ def check_for_doi(record):
 
 
 def check_mandatory_fields(record):
+    checkPass = False
     acNr = record.find(".//controlfield[@tag='009']").text
     print(f"Processing: {acNr}")
     # check for DOI:
