@@ -8,3 +8,29 @@ AC16650668 - No subfied d in datafield 970
 AC16650686 - No datafield 536
 AC16650686 - No subfied 2 in datafield 024
 AC16650686 - No subfied d in datafield 970
+AC16650671 - No datafield 536
+AC16650671 - No subfied d in datafield 970
+AC16650691 - No datafield 536
+AC16650691 - No subfied d in datafield 970
+AC16650668 - No datafield 024
+AC16650668 - No datafield 536
+AC16650668 - No subfied d in datafield 970
+AC16650686 - No datafield 536
+AC16650686 - No subfied 2 in datafield 024
+AC16650686 - No subfied d in datafield 970
+AC16650671 - No datafield 536
+AC16650671 - No subfied d in datafield 970
+AC16650691 - No datafield 536
+AC16650691 - No subfied d in datafield 970
+AC16650668 - No datafield 024
+AC16650668 - No datafield 536
+AC16650668 - No subfied d in datafield 970
+AC16650686 - No datafield 536
+AC16650686 - No subfied 2 in datafield 024
+AC16650686 - No subfied d in datafield 970
+AC16650671 - No subfield d in datafield 970
+AC16650691 - No subfield d in datafield 970
+AC16650668 - No datafield 024
+AC16650668 - No subfield d in datafield 970
+AC16650686 - No subfield 2 in datafield 024
+AC16650686 - No subfield d in datafield 970

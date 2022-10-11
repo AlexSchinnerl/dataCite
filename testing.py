@@ -11,10 +11,8 @@ collection = tree.getroot()
 
 checkTagsDict = {
     # keys: Datafields, Values: Subfields
-    # "008":1,
     "024":["2","a"],
     "041":["a"],
-    # "100":["a"], optional 100 or 700 or both
     "245":["a"], # b = optional
     "264":["b", "c"],
     "300":["a"],
@@ -26,8 +24,24 @@ checkTagsDict = {
     # "700":["a"],
     # "773":["t","g"], # optinal, 490 or 773
     "970":["d"]
+    # "100":["a"], optional 100 or 700 or both
     }
 
+cfList = ["008", "009"]
+
+
+
+def checkControlfields(record):
+    allCFs = True
+    for item in cfList:
+        if record.find(f".//controlfield[@tag='{item}']") is None:
+            txtMsg = f"No controlfield {item}"
+            print(txtMsg)
+            write_log(record, txtMsg)
+            allCFs = False
+        # else:
+        #     print(record.find(f".//controlfield[@tag='{item}']").text)
+    return allCFs
 
 def checkDatafields(record):
     allDFs = True
@@ -38,29 +52,11 @@ def checkDatafields(record):
             print(txtMsg)
             write_log(record, txtMsg)
             allDFs = False
-        else:
+        # else:
             # tagsDict[key](output, record) # run map function
-            print(key, checkTagsDict[key])
-            # print(record.find(f".//datafield[@tag='{key}']").text)
-            # print(record.find(f".//datafield[@tag='{key}']").tag)
-            # print(record.find(f".//datafield[@tag='{key}']").attrib)
-            # for item in checkTagsDict[key]:
-            #     print(item)
-            #     for datafield in record.find(f".//datafield[@tag='{key}']"):
-            #         if datafield.find(f"subfield[@code='{item}']") is None:
-            #             print("No")
-            #         else:
-            #             print(datafield.find(f"subfield[@code='{item}']").text)
+            # print(key, checkTagsDict[key])
+
     return allDFs
-
-
-    # # txtMsg = ""
-    # for item in checkingSubfield:
-    #     if item.find(f"subfield[@code='{subfieldCode}']") is None:
-    #         txtMsg = f"Missing Subfield '{subfieldCode}' in datafield {datafield}"
-    #         write_log(record, txtMsg)
-    #         missingSubfield = True
-    # return missingSubfield
 
 def checkSubfields(record):
     allSubfields = True
@@ -69,7 +65,7 @@ def checkSubfields(record):
         for datafield in datafields:
             for value in checkTagsDict[key]:
                 if datafield.find(f"subfield[@code='{value}']") is None:
-                    txtMsg = f"No subfied {value} in datafield {key}"
+                    txtMsg = f"No subfield {value} in datafield {key}"
                     print(txtMsg)
                     write_log(record, txtMsg)
                     allSubfields = False
@@ -78,8 +74,38 @@ def checkSubfields(record):
     
     return allSubfields
 
+def runTests(record):
+    print("Testing: ", record.find(".//controlfield[@tag='009']").text)
+    controlSum = 0
+    if checkControlfields(record):
+        print("Controlfields clear")
+        controlSum +=1
+    if checkDatafields(record):
+        print("Datafields clear")
+        controlSum +=1
+    if checkSubfields(record):
+        print("Subfields clear")
+        controlSum +=1
+    if controlSum == 3:
+        print("All clear")
+
+def check_for_doi(record):
+    checkDOI = False
+    for item in record.findall(".//datafield[@tag='024']"):
+        if item.find("subfield[@code='2']").text == "doi":
+                checkDOI = True
+    if checkDOI == False:
+        textMsg = "No DOI in record"
+        # print(textMsg)
+        write_log(record, textMsg)
+
+
+# 1. All DFS
+# 2. All SFs
+# 3. Check for SF content
 
 for record in collection:
-    print(record.find(".//controlfield[@tag='009']").text)
-    print(checkDatafields(record))
-    print(checkSubfields(record))
+    runTests(record)
+    # checkControlfields(record)
+    # print(checkDatafields(record))
+    # print(checkSubfields(record))
