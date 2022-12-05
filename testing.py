@@ -21,10 +21,8 @@ checkTagsDict = {
     "520":["a"],
     "536":["f", "a"],
     "540":["f", "u"],
-    # "700":["a"],
     # "773":["t","g"], # optinal, 490 or 773
     "970":["d"]
-    # "100":["a"], optional 100 or 700 or both
     }
 
 cfList = ["008", "009"]
@@ -73,6 +71,14 @@ def checkSubfields(record):
                 #     print(datafield.find(f"subfield[@code='{value}']").text)
     
     return allSubfields
+
+def checkAuthor(record):
+    # check if author in 100 and/or 700
+    if record.find(".//datafield[@tag='100']") == None and record.find(".//datafield[@tag='700']") == None:
+        textMsg = "No author (datafield 100 or datafield 700) in record"
+        # print(textMsg)
+        write_log(record, textMsg)
+
 
 def runTests(record):
     print("Testing: ", record.find(".//controlfield[@tag='009']").text)
