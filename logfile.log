@@ -1,0 +1,12 @@
+2022-12-06 14:20:47,218 - WARNING - warning
+2022-12-06 14:20:47,257 - INFO - the valuie of x is 2
+2022-12-06 14:20:47,306 - ERROR - ZeroDivisionError
+Traceback (most recent call last):
+  File "C:\Users\AK122837\AppData\Local\Temp\ipykernel_39100\1181355313.py", line 3, in <cell line: 2>
+    1/0
+ZeroDivisionError: division by zero
+2022-12-06 14:20:47,358 - ERROR - ZeroDivisionError variante 2
+Traceback (most recent call last):
+  File "C:\Users\AK122837\AppData\Local\Temp\ipykernel_39100\3732879887.py", line 3, in <cell line: 2>
+    1/0
+ZeroDivisionError: division by zero
