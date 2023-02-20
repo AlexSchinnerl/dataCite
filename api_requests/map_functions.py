@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 import re
-from testingRecord_API import write_log
+from testingRecord import write_log
 
 # Date -------------------------------------------------------------
 def create_date(output, record):

@@ -1,5 +1,8 @@
-import os
 import xml.etree.ElementTree as ET
+import re
+import requests
+import keyring
+import os
 import map_functions
 from testingRecord import check_mandatory_fields
 
@@ -10,6 +13,20 @@ def clear_directory(directory):
     filelist = [file for file in os.listdir(directory) if file.endswith(".xml")]
     for f in filelist:
         os.remove(os.path.join(directory, f))
+
+def loader(acNr):
+    """
+    Takes an acNr and builds an api request. Then gives the response as xml and also saves the xml in a file (for later checkup)
+    """
+    key = keyring.get_password("alma_api", "alx_prod").rstrip()
+    base = "https://api-eu.hosted.exlibrisgroup.com"
+    url = f"{base}/almaws/v1/bibs?other_system_id=(AT-OBV){acNr}&apikey={key}"
+    response = requests.get(url)
+    root = ET.fromstring(response.content)
+    # save response for checking
+    with open(f"api_requests/response_files/response_{acNr}.xml", "w", encoding="UTF-8") as f:
+        f.write(response.text)
+    return root
 
 def create_DCxml(record):
     '''
@@ -52,17 +69,22 @@ def main():
     Loads the input xml file (Alma export), checks if mandatory fields are present and starts for each record in collection the create_DCxml function.
     '''
     # clear folders
-    dir_list = ["output"] # list of folders to clear before program starts
+    dir_list = ["api_requests/response_files", "api_requests/output"] # list of folders to clear before program starts
     for directory in dir_list:
         clear_directory(directory)
     #clear log file
     open("output/log.txt", "w").close()
     # Load Alma xml
-    tree = ET.parse("inputFile.xml")
-    collection = tree.getroot()
-    # go through all records in collection    
+    ## open input file and get acNumbers
+    with open("api_requests/input.txt", "r") as i:
+        inputfile = i.read()
+        acNumbers = re.findall("AC\d{8}", inputfile) # find AC Numbers in input file
+    ## use loader to get xml root
     counter = 0
-    for record in collection:
+    for number in acNumbers:
+        root = loader(number)
+        # go through all records    
+        record = root.find("bib").find("record")
         check_mandatory_fields(record)
         output = create_DCxml(record)
         # create tree
@@ -72,9 +94,8 @@ def main():
         outputTree.write("output/output_{}.xml".format(acNr))
         print("created output_{}.xml".format(acNr))
         counter+=1
-        # print(counter)
-    
-    print("completed {} files".format(counter))
+        # print(counter)       
+        print("completed {} files".format(counter))
     # count content in log file
     errorCount = 0
     with open("output/log.txt") as log:
