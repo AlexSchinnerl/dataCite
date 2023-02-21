@@ -1,9 +1,9 @@
 # AlmaXml_2_dataCite
 ## Goal
-We got a xml from an Alma export and want to transform it in a xml file suitable for uploading to the dataCite Website.
+We got a XML from an Alma export and want to transform it in a XML file suitable for uploading to the dataCite Website.
 
 ## How it works
-The programm takes an Alma export file as input and searches for a specific field tag in the xml tree. Then take the information of the field (text, attributes, ...) and asign them to a xml tag corresponding to the template needed to upload at the dataCite website.
+The programm takes an Alma export file as input and searches for a specific field tag in the XML-tree. Then take the information of the field (text, attributes, ...) and asign them to a XML-Tag corresponding to the template needed to upload at the dataCite website.
 
 **Note!** Some Fields are filled with features, specially tailored to meet the needs of the JKU and would need adaptation if used in a different university.
 
@@ -20,9 +20,9 @@ The produced output and a logFile containing some caveats is stored in the outpu
  The `dataciteExample.xml` contains the example structure, provided by the DataCite Website (https://schema.datacite.org/meta/kernel-4.4)
 
 ### Input File
-The programm expects an input xml file which was exported from Alma via the "Export Bibliographic records" job.
+The programm expects an input XML-File which was exported from Alma via the "Export Bibliographic records" job.
 
-The file should be named "inputFile.xml" and the structure should look as follows:
+The file should be named `inputFile.xml` and the structure should look as follows:
 ```xml
 <collection>
     <record>
@@ -36,10 +36,10 @@ The file should be named "inputFile.xml" and the structure should look as follow
 ```
 ## Python Files
 ### main
-Contains the main method, where the input file is loaded and for each provided record a DataCite compatible xml file is created and saved in the output folder.
+Contains the main method, where the input file is loaded and for each provided record a DataCite compatible XML-File is created and saved in the output folder.
 
 ### map_functions
-Stores all functionions needed to map a datafield from the input file to the output xml.
+Stores all functionions needed to map a datafield from the input file to the output XML.
 
 ### testingRecord
 Hold a function to test if mandatory fields are present in the input file and one to write caveats in the logfile
