@@ -24,7 +24,7 @@ def loader(acNr):
     response = requests.get(url)
     root = ET.fromstring(response.content)
     # save response for checking
-    with open(f"api_requests/response_files/response_{acNr}.xml", "w", encoding="UTF-8") as f:
+    with open(f"response_files/response_{acNr}.xml", "w", encoding="UTF-8") as f:
         f.write(response.text)
     return root
 
@@ -68,15 +68,18 @@ def main():
     '''
     Loads the input xml file (Alma export), checks if mandatory fields are present and starts for each record in collection the create_DCxml function.
     '''
+    # change cwd to api requests
+    os.chdir("api_requests")
+    # print(os.getcwd())
     # clear folders
-    dir_list = ["api_requests/response_files", "api_requests/output"] # list of folders to clear before program starts
+    dir_list = ["response_files", "output"] # list of folders to clear before program starts
     for directory in dir_list:
         clear_directory(directory)
     #clear log file
     open("output/log.txt", "w").close()
     # Load Alma xml
     ## open input file and get acNumbers
-    with open("api_requests/input.txt", "r") as i:
+    with open("input.txt", "r") as i:
         inputfile = i.read()
         acNumbers = re.findall("AC\d{8}", inputfile) # find AC Numbers in input file
     ## use loader to get xml root
