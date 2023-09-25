@@ -1,36 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <collection>
     <record>
-        <leader>04006naa#a2200433#c#4500</leader>
-        <controlfield tag="001">997090426903340</controlfield>
-        <controlfield tag="005">20230209131251.0</controlfield>
+        <leader>02551naa#a2200397#c#4500</leader>
+        <controlfield tag="001">997130926203340</controlfield>
+        <controlfield tag="005">20230909031224.0</controlfield>
         <controlfield tag="007">cr#|||||||||||</controlfield>
-        <controlfield tag="008">230209s2022####||||||||o|||||||||||eng|c</controlfield>
-        <controlfield tag="009">AC16766737</controlfield>
+        <controlfield tag="008">230829s2023####||||||||o|||||||||||eng|c</controlfield>
+        <controlfield tag="009">AC16930434</controlfield>
         <datafield tag="024" ind1="7" ind2=" ">
-            <subfield code="a">10.1108/IJRDM-06-2022-0194</subfield>
+            <subfield code="a">10-35011/IDIMT-2023-51</subfield>
             <subfield code="2">doi</subfield>
         </datafield>
         <datafield tag="024" ind1="7" ind2=" ">
-            <subfield code="a">urn:nbn:at:at-ubl:3-17136</subfield>
+            <subfield code="a">urn:nbn:at:at-ubl:3-20488</subfield>
             <subfield code="2">urn</subfield>
         </datafield>
         <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(AT-OBV)AC16766737</subfield>
+            <subfield code="a">(AT-OBV)AC16930434</subfield>
         </datafield>
         <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(VLID)8406501</subfield>
+            <subfield code="a">(VLID)9026545</subfield>
         </datafield>
         <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(DE-599)OBVAC16766737</subfield>
+            <subfield code="a">(DE-599)OBVAC16930434</subfield>
         </datafield>
         <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(EXLNZ-43ACC_NETWORK)99147185751003331</subfield>
+            <subfield code="a">(EXLNZ-43ACC_NETWORK)99147604951803331</subfield>
         </datafield>
         <datafield tag="040" ind1=" " ind2=" ">
             <subfield code="a">AT-UBL</subfield>
             <subfield code="b">ger</subfield>
             <subfield code="d">AT-UBL</subfield>
+            <subfield code="e">rda</subfield>
         </datafield>
         <datafield tag="041" ind1=" " ind2=" ">
             <subfield code="a">eng</subfield>
@@ -39,19 +40,17 @@
             <subfield code="c">XA-AT</subfield>
         </datafield>
         <datafield tag="100" ind1="1" ind2=" ">
-            <subfield code="a">Mayr, Kathrin</subfield>
+            <subfield code="a">Sonntag, Michael</subfield>
             <subfield code="4">aut</subfield>
+            <subfield code="9">(orcid)0000-0002-2506-2350</subfield>
         </datafield>
         <datafield tag="245" ind1="1" ind2="0">
-            <subfield code="a">Unethical customer behaviour: causes and consequences</subfield>
-        </datafield>
-        <datafield tag="251" ind1=" " ind2=" ">
-            <subfield code="a">vor</subfield>
-            <subfield code="2">coar</subfield>
+            <subfield code="a">An Evidence Collection System for Robot-Supported Inspection of Critical Infrastructure</subfield>
         </datafield>
         <datafield tag="264" ind1=" " ind2="1">
-            <subfield code="b">Emerald</subfield>
-            <subfield code="c">2022</subfield>
+            <subfield code="a">Linz</subfield>
+            <subfield code="b">Trauner Verlag</subfield>
+            <subfield code="c">2023</subfield>
         </datafield>
         <datafield tag="300" ind1=" " ind2=" ">
             <subfield code="a">1 Online-Ressource</subfield>
@@ -65,656 +64,60 @@
         <datafield tag="338" ind1=" " ind2=" ">
             <subfield code="b">cr</subfield>
         </datafield>
-        <datafield tag="347" ind1=" " ind2=" ">
-            <subfield code="a">Textdatei</subfield>
-            <subfield code="b">PDF</subfield>
-        </datafield>
         <datafield tag="506" ind1="0" ind2=" ">
             <subfield code="f">Unrestricted online access</subfield>
             <subfield code="2">star</subfield>
         </datafield>
         <datafield tag="520" ind1=" " ind2=" ">
-            <subfield code="a">eng: Purpose – Unethically behaving customers deviating from morally acceptable norms have posed an additional challenge to retailers, frontline employees (FLEs) and other customers in recent crisis-dominant environments. While research concerning customer behaviour ethicality focusses on purchasing modes and consumption behaviour, unethicality in all its facets receives limited attention, leaving dimensions of unethical customer behaviour (UCB) and effective managerial strategies unexplored. The purpose of this paper is to describe dimensions of UCB, investigate its causes, explore its consequences for customers and FLEs and inferpractical implications for retail management by collecting customers’ and FLEs’ views in collaboration of each other.Design/methodology/approach – Due to the explorative nature of this research, qualitative semi-structured interviews with 45 customers and 51 FLEs were conducted, following a content analytical approach and the establishment of inter-rater reliability coefficients. Findings – The findings reveal multiple UCB dimensions operating on situational and individual behavioural levels, targeting mainly employees, followed by customers. The reasons for UCB arising correspond to customers’ attitudes, social influences and egoistic motives. UCB imposes risks of financial losses for retailers, due to the wasting of resources as a consequence of employees’ stress and emotional exhaustion, demanding managerial boundary-spanning activities. Further, it negatively impacts customers’ shopping behaviours, provoking online shopping and shopping avoidance. Originality/value – The study fills the research gap regarding perceived unethicality of customer behaviourby describing and explaining differing forms of UCB, considering customers’ and FLEs’ views in retail stores. It develops a UCB framework, identifies UCB dimensions beyond current academic research and derives specific practical implications to make the phenomenon manageable for retailers. The originality of this paper lies in the synthesis of the three UCB dimensions, consisting of antecedents, forms of UCB and consequences for ustomers and FLEs.</subfield>
+            <subfield code="a">eng: In many sectors, it is necessary to collect evidence in advance, as it may be needed later. While evidence in law enforcement is collected after a crime has occurred to solve it, it needs to be collected in commercial systems in advance to avoid potential future disputes. But can existing data (in the rare case it is needed as such) serve as credible and useful evidence? In this paper we describe the design of a system to collect data for potential use as proof that inspections of critical infrastructure (in this case cable ducts) took place and that certain alarms about potential problems did (or did not) occur. The system consists of two parts, a mobile robot, and a base station. Data needs to be collected independently in both parts and combined later to be able to serve as evidence.</subfield>
         </datafield>
         <datafield tag="540" ind1=" " ind2=" ">
-            <subfield code="f">CC BY 4.0</subfield>
-            <subfield code="u">https://creativecommons.org/licenses/by/4.0/deed.de</subfield>
+            <subfield code="f">CC BY-NC-ND 4.0</subfield>
+            <subfield code="u">https://creativecommons.org/licenses/by-nc-nd/4.0/deed.de</subfield>
             <subfield code="2">cc</subfield>
         </datafield>
-        <datafield tag="700" ind1="1" ind2=" ">
-            <subfield code="a">Schwendtner, Teresa</subfield>
-            <subfield code="4">aut</subfield>
+        <datafield tag="653" ind1=" " ind2="0">
+            <subfield code="a">Evidence collection</subfield>
+        </datafield>
+        <datafield tag="653" ind1=" " ind2="0">
+            <subfield code="a">critical infrastructure</subfield>
+        </datafield>
+        <datafield tag="653" ind1=" " ind2="0">
+            <subfield code="a">threat model</subfield>
         </datafield>
         <datafield tag="700" ind1="1" ind2=" ">
-            <subfield code="a">Teller, Christoph</subfield>
+            <subfield code="a">Schraml, Stephan</subfield>
             <subfield code="4">aut</subfield>
-        </datafield>
-        <datafield tag="700" ind1="1" ind2=" ">
-            <subfield code="a">Gittenberger, Ernst</subfield>
-            <subfield code="4">aut</subfield>
+            <subfield code="9">(orcid)0000-0002-2506-2350</subfield>
         </datafield>
         <datafield tag="773" ind1="0" ind2="8">
             <subfield code="i">Enthalten in</subfield>
-            <subfield code="t">International Journal of Retail &amp; Distribution Management</subfield>
-            <subfield code="d"> Emerald, 2022</subfield>
-            <subfield code="g">50 (2022), 13, Seite 200-224</subfield>
-            <subfield code="x">0959-0552</subfield>
+            <subfield code="t">IDIMT-2023 : New Challenges for ICT and Management; 31st Interdisciplinary Information Management Talks Sept. 6–8, 2023 Hradec Králové, Czech Republic / Doucek, Petr ; Sonntag, Michael ; Nedomova, Lea</subfield>
+            <subfield code="d">Linz : Trauner Verlag, 2023</subfield>
+            <subfield code="g">(2023), Seite 51-62</subfield>
+            <subfield code="k">Schriftenreihe Informatik ; Band: 52</subfield>
+            <subfield code="w">(AT-OBV)9022873</subfield>
+            <subfield code="z">978-3-99151-176-2</subfield>
         </datafield>
         <datafield tag="856" ind1="4" ind2="0">
             <subfield code="m">V:AT-OBV;B:AT-UBL</subfield>
             <subfield code="o">OBV-EDOC-VL</subfield>
             <subfield code="q">text/html</subfield>
-            <subfield code="u">https://resolver.obvsg.at/urn:nbn:at:at-ubl:3-17136</subfield>
+            <subfield code="u">https://resolver.obvsg.at/urn:nbn:at:at-ubl:3-20488</subfield>
             <subfield code="x">UBL</subfield>
             <subfield code="z">kostenfrei</subfield>
             <subfield code="3">Volltext</subfield>
         </datafield>
         <datafield tag="970" ind1="2" ind2=" ">
-            <subfield code="d">OA-ARTICLE</subfield>
+            <subfield code="d">OA-BOOKPART</subfield>
         </datafield>
         <datafield tag="970" ind1="9" ind2=" ">
             <subfield code="m">V:AT-OBV;B:AT-UBL</subfield>
             <subfield code="q">application/pdf</subfield>
-            <subfield code="u">http://media.obvsg.at/AC16766737-2001</subfield>
+            <subfield code="u">http://media.obvsg.at/AC16930434-2001</subfield>
             <subfield code="x">UBL</subfield>
             <subfield code="z">kostenfrei</subfield>
             <subfield code="3">Volltext</subfield>
-        </datafield>
-        <datafield tag="971" ind1="5" ind2=" ">
-            <subfield code="a">Universität Linz</subfield>
-            <subfield code="b">Sozial- und Wirtschaftswissenschaftliche Fakultät</subfield>
-            <subfield code="c">Institut für Handel, Absatz und Marketing. Abteilung Marketing for Emerging Markets</subfield>
-            <subfield code="0">ioo:UL:SW:MF</subfield>
-        </datafield>
-        <datafield tag="971" ind1="9" ind2=" ">
-            <subfield code="a">Unethical customer behaviour / Customer behaviour in crisis situations / Frontline employees / Retail management</subfield>
-        </datafield>
-    </record>
-    <record>
-        <leader>02498nam#a2200421#c#4500</leader>
-        <controlfield tag="001">997090427003340</controlfield>
-        <controlfield tag="005">20230209151053.0</controlfield>
-        <controlfield tag="007">cr#|||||||||||</controlfield>
-        <controlfield tag="008">230209s2023####||||||||o|||||||||||eng|c</controlfield>
-        <controlfield tag="009">AC16767331</controlfield>
-        <datafield tag="024" ind1="7" ind2=" ">
-            <subfield code="a">10.35011/risc.23-03</subfield>
-            <subfield code="2">doi</subfield>
-        </datafield>
-        <datafield tag="024" ind1="7" ind2=" ">
-            <subfield code="a">urn:nbn:at:at-ubl:3-17121</subfield>
-            <subfield code="2">urn</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(AT-OBV)AC16767331</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(VLID)8400122</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(DE-599)OBVAC16767331</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(EXLNZ-43ACC_NETWORK)99147185747503331</subfield>
-        </datafield>
-        <datafield tag="040" ind1=" " ind2=" ">
-            <subfield code="a">AT-UBL</subfield>
-            <subfield code="b">ger</subfield>
-            <subfield code="d">AT-UBL</subfield>
-        </datafield>
-        <datafield tag="041" ind1=" " ind2=" ">
-            <subfield code="a">eng</subfield>
-        </datafield>
-        <datafield tag="044" ind1=" " ind2=" ">
-            <subfield code="c">XA-AT</subfield>
-        </datafield>
-        <datafield tag="100" ind1="1" ind2=" ">
-            <subfield code="a">Kauers, Manuel</subfield>
-            <subfield code="4">aut</subfield>
-        </datafield>
-        <datafield tag="245" ind1="1" ind2="0">
-            <subfield code="a">Order bounds for $C^2$-finite sequences</subfield>
-            <subfield code="b">RISC Report Series, 23-03</subfield>
-        </datafield>
-        <datafield tag="264" ind1=" " ind2="1">
-            <subfield code="a">Linz</subfield>
-            <subfield code="b">Research Institute for Symbolic Computation (RISC), Johannes Kepler University Linz</subfield>
-            <subfield code="c">2023</subfield>
-        </datafield>
-        <datafield tag="300" ind1=" " ind2=" ">
-            <subfield code="a">1 Online-Ressource (16 Seiten)</subfield>
-        </datafield>
-        <datafield tag="336" ind1=" " ind2=" ">
-            <subfield code="b">txt</subfield>
-        </datafield>
-        <datafield tag="337" ind1=" " ind2=" ">
-            <subfield code="b">c</subfield>
-        </datafield>
-        <datafield tag="338" ind1=" " ind2=" ">
-            <subfield code="b">cr</subfield>
-        </datafield>
-        <datafield tag="347" ind1=" " ind2=" ">
-            <subfield code="a">Textdatei</subfield>
-            <subfield code="b">PDF</subfield>
-        </datafield>
-        <datafield tag="490" ind1="0" ind2=" ">
-            <subfield code="a">RISC Report Series</subfield>
-            <subfield code="v">23-03</subfield>
-        </datafield>
-        <datafield tag="506" ind1="0" ind2=" ">
-            <subfield code="f">Unrestricted online access</subfield>
-            <subfield code="2">star</subfield>
-        </datafield>
-        <datafield tag="520" ind1=" " ind2=" ">
-            <subfield code="a">eng: A sequence is called $C$-finite if it satisfies a linear recurrence with constant coefficients. We study sequences which satisfy a linear recurrence with $C$-finite coefficients. Recently, it was shown that such $C^2$-finite sequences satisfy similar closure properties as $C$-finite sequences. In particular, they form a difference ring. In this paper we present new techniques for performing these closure properties of $C^2$-finite sequences. These methods also allow us to derive order bounds which were not known before. Additionally, they provide more insight in the effectiveness of these computations. The results are based on the exponent lattice of algebraic numbers. We present an iterative algorithm which can be used to compute bases of such lattices.</subfield>
-        </datafield>
-        <datafield tag="540" ind1=" " ind2=" ">
-            <subfield code="f">CC BY 4.0</subfield>
-            <subfield code="u">https://creativecommons.org/licenses/by/4.0/deed.de</subfield>
-            <subfield code="2">cc</subfield>
-        </datafield>
-        <datafield tag="700" ind1="1" ind2=" ">
-            <subfield code="a">Nuspl, Philipp</subfield>
-            <subfield code="4">aut</subfield>
-        </datafield>
-        <datafield tag="700" ind1="1" ind2=" ">
-            <subfield code="a">Pillwein, Veronika</subfield>
-            <subfield code="4">aut</subfield>
-        </datafield>
-        <datafield tag="856" ind1="4" ind2="0">
-            <subfield code="m">V:AT-OBV;B:AT-UBL</subfield>
-            <subfield code="o">OBV-EDOC-VL</subfield>
-            <subfield code="q">text/html</subfield>
-            <subfield code="u">https://resolver.obvsg.at/urn:nbn:at:at-ubl:3-17121</subfield>
-            <subfield code="x">UBL</subfield>
-            <subfield code="z">kostenfrei</subfield>
-            <subfield code="3">Volltext</subfield>
-        </datafield>
-        <datafield tag="970" ind1="2" ind2=" ">
-            <subfield code="d">OA-MONOGRAPH</subfield>
-        </datafield>
-        <datafield tag="970" ind1="9" ind2=" ">
-            <subfield code="m">V:AT-OBV;B:AT-UBL</subfield>
-            <subfield code="q">application/pdf</subfield>
-            <subfield code="u">http://media.obvsg.at/AC16767331-2001</subfield>
-            <subfield code="x">UBL</subfield>
-            <subfield code="z">kostenfrei</subfield>
-            <subfield code="3">Volltext</subfield>
-        </datafield>
-        <datafield tag="971" ind1="5" ind2=" ">
-            <subfield code="a">Universität Linz</subfield>
-            <subfield code="b">Technisch-Naturwissenschaftliche Fakultät</subfield>
-            <subfield code="c">Institut für Algebra</subfield>
-            <subfield code="0">ioo:UL:TN:AA</subfield>
-        </datafield>
-        <datafield tag="971" ind1="5" ind2=" ">
-            <subfield code="a">Universität Linz</subfield>
-            <subfield code="b">Technisch-Naturwissenschaftliche Fakultät</subfield>
-            <subfield code="c">Institut für Symbolisches Rechnen (RISC)</subfield>
-            <subfield code="0">ioo:UL:TN:SR</subfield>
-        </datafield>
-        <datafield tag="971" ind1="9" ind2=" ">
-            <subfield code="a">Difference equations / holonomic sequences / closure properties / algorithms</subfield>
-        </datafield>
-    </record>
-    <record>
-        <leader>02244nam#a2200397#c#4500</leader>
-        <controlfield tag="001">997090427103340</controlfield>
-        <controlfield tag="005">20230209151052.0</controlfield>
-        <controlfield tag="007">cr#|||||||||||</controlfield>
-        <controlfield tag="008">230209s2022####||||||||o|||||||||||eng|c</controlfield>
-        <controlfield tag="009">AC16767327</controlfield>
-        <datafield tag="024" ind1="7" ind2=" ">
-            <subfield code="a">10.35011/risc.22-17</subfield>
-            <subfield code="2">doi</subfield>
-        </datafield>
-        <datafield tag="024" ind1="7" ind2=" ">
-            <subfield code="a">urn:nbn:at:at-ubl:3-17098</subfield>
-            <subfield code="2">urn</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(AT-OBV)AC16767327</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(VLID)8400109</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(DE-599)OBVAC16767327</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(EXLNZ-43ACC_NETWORK)99147185747703331</subfield>
-        </datafield>
-        <datafield tag="040" ind1=" " ind2=" ">
-            <subfield code="a">AT-UBL</subfield>
-            <subfield code="b">ger</subfield>
-            <subfield code="d">AT-UBL</subfield>
-        </datafield>
-        <datafield tag="041" ind1=" " ind2=" ">
-            <subfield code="a">eng</subfield>
-        </datafield>
-        <datafield tag="044" ind1=" " ind2=" ">
-            <subfield code="c">XA-AT</subfield>
-        </datafield>
-        <datafield tag="100" ind1="1" ind2=" ">
-            <subfield code="a">Sellers, James A.</subfield>
-            <subfield code="4">aut</subfield>
-        </datafield>
-        <datafield tag="245" ind1="1" ind2="0">
-            <subfield code="a">On the divisibility of 7-elongated plane partition diamonds by powers of 8</subfield>
-            <subfield code="b">RISC Report Series, 22-17</subfield>
-        </datafield>
-        <datafield tag="264" ind1=" " ind2="1">
-            <subfield code="a">Linz</subfield>
-            <subfield code="b">Research Institute for Symbolic Computation (RISC), Johannes Kepler University Linz</subfield>
-            <subfield code="c">2022</subfield>
-        </datafield>
-        <datafield tag="300" ind1=" " ind2=" ">
-            <subfield code="a">1 Online-Ressource (11 Seiten)</subfield>
-        </datafield>
-        <datafield tag="336" ind1=" " ind2=" ">
-            <subfield code="b">txt</subfield>
-        </datafield>
-        <datafield tag="337" ind1=" " ind2=" ">
-            <subfield code="b">c</subfield>
-        </datafield>
-        <datafield tag="338" ind1=" " ind2=" ">
-            <subfield code="b">cr</subfield>
-        </datafield>
-        <datafield tag="347" ind1=" " ind2=" ">
-            <subfield code="a">Textdatei</subfield>
-            <subfield code="b">PDF</subfield>
-        </datafield>
-        <datafield tag="490" ind1="0" ind2=" ">
-            <subfield code="a">RISC Report Series</subfield>
-            <subfield code="v">22-17</subfield>
-        </datafield>
-        <datafield tag="506" ind1="0" ind2=" ">
-            <subfield code="f">Unrestricted online access</subfield>
-            <subfield code="2">star</subfield>
-        </datafield>
-        <datafield tag="520" ind1=" " ind2=" ">
-            <subfield code="a">eng: In 2021 da Silva, Hirschhorn, and Sellers studied a wide variety of congruences for the $k$-elongated plane partition function $d_k(n)$ by various primes. They also conjectured the existence of an infinite congruence family modulo arbitrarily high powers of 2 for the function $d_7(n)$. We prove that such a congruence family exists---indeed, for powers of 8. The proof utilizes only classical methods, i.e., integer polynomial manipulations in a single function, in contrast to all other known infinite congruence families for $d_k(n)$ which require more modern methods to prove.</subfield>
-        </datafield>
-        <datafield tag="540" ind1=" " ind2=" ">
-            <subfield code="f">CC BY 4.0</subfield>
-            <subfield code="u">https://creativecommons.org/licenses/by/4.0/deed.de</subfield>
-            <subfield code="2">cc</subfield>
-        </datafield>
-        <datafield tag="700" ind1="1" ind2=" ">
-            <subfield code="a">Smoot, Nicolas Allen</subfield>
-            <subfield code="4">aut</subfield>
-        </datafield>
-        <datafield tag="856" ind1="4" ind2="0">
-            <subfield code="m">V:AT-OBV;B:AT-UBL</subfield>
-            <subfield code="o">OBV-EDOC-VL</subfield>
-            <subfield code="q">text/html</subfield>
-            <subfield code="u">https://resolver.obvsg.at/urn:nbn:at:at-ubl:3-17098</subfield>
-            <subfield code="x">UBL</subfield>
-            <subfield code="z">kostenfrei</subfield>
-            <subfield code="3">Volltext</subfield>
-        </datafield>
-        <datafield tag="970" ind1="2" ind2=" ">
-            <subfield code="d">OA-MONOGRAPH</subfield>
-        </datafield>
-        <datafield tag="970" ind1="9" ind2=" ">
-            <subfield code="m">V:AT-OBV;B:AT-UBL</subfield>
-            <subfield code="q">application/pdf</subfield>
-            <subfield code="u">http://media.obvsg.at/AC16767327-2001</subfield>
-            <subfield code="x">UBL</subfield>
-            <subfield code="z">kostenfrei</subfield>
-            <subfield code="3">Volltext</subfield>
-        </datafield>
-        <datafield tag="971" ind1="5" ind2=" ">
-            <subfield code="a">Universität Linz</subfield>
-            <subfield code="b">Technisch-Naturwissenschaftliche Fakultät</subfield>
-            <subfield code="c">Institut für Symbolisches Rechnen (RISC)</subfield>
-            <subfield code="0">ioo:UL:TN:SR</subfield>
-        </datafield>
-        <datafield tag="971" ind1="9" ind2=" ">
-            <subfield code="a">Partition congruences / infinite congruence family / modular functions / plane partitions / modular curve / Riemann surface</subfield>
-        </datafield>
-    </record>
-    <record>
-        <leader>02178nam#a2200385#c#4500</leader>
-        <controlfield tag="001">997090427203340</controlfield>
-        <controlfield tag="005">20230209151052.0</controlfield>
-        <controlfield tag="007">cr#|||||||||||</controlfield>
-        <controlfield tag="008">230209s2023####||||||||o|||||||||||eng|c</controlfield>
-        <controlfield tag="009">AC16767328</controlfield>
-        <datafield tag="024" ind1="7" ind2=" ">
-            <subfield code="a">10.35011/risc.23-01</subfield>
-            <subfield code="2">doi</subfield>
-        </datafield>
-        <datafield tag="024" ind1="7" ind2=" ">
-            <subfield code="a">urn:nbn:at:at-ubl:3-17087</subfield>
-            <subfield code="2">urn</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(AT-OBV)AC16767328</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(VLID)8400095</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(DE-599)OBVAC16767328</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(EXLNZ-43ACC_NETWORK)99147185646803331</subfield>
-        </datafield>
-        <datafield tag="040" ind1=" " ind2=" ">
-            <subfield code="a">AT-UBL</subfield>
-            <subfield code="b">ger</subfield>
-            <subfield code="d">AT-UBL</subfield>
-        </datafield>
-        <datafield tag="041" ind1=" " ind2=" ">
-            <subfield code="a">eng</subfield>
-        </datafield>
-        <datafield tag="044" ind1=" " ind2=" ">
-            <subfield code="c">XA-AT</subfield>
-        </datafield>
-        <datafield tag="100" ind1="1" ind2=" ">
-            <subfield code="a">Schneider, Carsten</subfield>
-            <subfield code="4">aut</subfield>
-        </datafield>
-        <datafield tag="245" ind1="1" ind2="0">
-            <subfield code="a">Refined telescoping algorithms in $R\Pi\Sigma$-extensions to reduce the degrees of the denominators</subfield>
-            <subfield code="b">RISC Report Series, 23-01</subfield>
-        </datafield>
-        <datafield tag="264" ind1=" " ind2="1">
-            <subfield code="a">Linz</subfield>
-            <subfield code="b">Research Institute for Symbolic Computation (RISC), Johannes Kepler University Linz</subfield>
-            <subfield code="c">2023</subfield>
-        </datafield>
-        <datafield tag="300" ind1=" " ind2=" ">
-            <subfield code="a">1 Online-Ressource (18 Seiten)</subfield>
-        </datafield>
-        <datafield tag="336" ind1=" " ind2=" ">
-            <subfield code="b">txt</subfield>
-        </datafield>
-        <datafield tag="337" ind1=" " ind2=" ">
-            <subfield code="b">c</subfield>
-        </datafield>
-        <datafield tag="338" ind1=" " ind2=" ">
-            <subfield code="b">cr</subfield>
-        </datafield>
-        <datafield tag="347" ind1=" " ind2=" ">
-            <subfield code="a">Textdatei</subfield>
-            <subfield code="b">PDF</subfield>
-        </datafield>
-        <datafield tag="490" ind1="0" ind2=" ">
-            <subfield code="a">RISC Report Series</subfield>
-            <subfield code="v">23-01</subfield>
-        </datafield>
-        <datafield tag="506" ind1="0" ind2=" ">
-            <subfield code="f">Unrestricted online access</subfield>
-            <subfield code="2">star</subfield>
-        </datafield>
-        <datafield tag="520" ind1=" " ind2=" ">
-            <subfield code="a">eng: We present a general framework in the setting of difference ring extensions that enables one to find improved representations of indefinite nested sums such that the arising denominators within the summands have reduced degrees. The underlying (parameterized) telescoping algorithms can be executed in $R\Pi\Sigma$-ring extensions that are built over general $\Pi\Sigma$-fields. An important application of this toolbox is the simplification of d&amp;#039;Alembertian and Liouvillian solutions coming from recurrence relations where the denominators of the arising sums do not factor nicely</subfield>
-        </datafield>
-        <datafield tag="540" ind1=" " ind2=" ">
-            <subfield code="f">CC BY 4.0</subfield>
-            <subfield code="u">https://creativecommons.org/licenses/by/4.0/deed.de</subfield>
-            <subfield code="2">cc</subfield>
-        </datafield>
-        <datafield tag="856" ind1="4" ind2="0">
-            <subfield code="m">V:AT-OBV;B:AT-UBL</subfield>
-            <subfield code="o">OBV-EDOC-VL</subfield>
-            <subfield code="q">text/html</subfield>
-            <subfield code="u">https://resolver.obvsg.at/urn:nbn:at:at-ubl:3-17087</subfield>
-            <subfield code="x">UBL</subfield>
-            <subfield code="z">kostenfrei</subfield>
-            <subfield code="3">Volltext</subfield>
-        </datafield>
-        <datafield tag="970" ind1="2" ind2=" ">
-            <subfield code="d">OA-MONOGRAPH</subfield>
-        </datafield>
-        <datafield tag="970" ind1="9" ind2=" ">
-            <subfield code="m">V:AT-OBV;B:AT-UBL</subfield>
-            <subfield code="q">application/pdf</subfield>
-            <subfield code="u">http://media.obvsg.at/AC16767328-2001</subfield>
-            <subfield code="x">UBL</subfield>
-            <subfield code="z">kostenfrei</subfield>
-            <subfield code="3">Volltext</subfield>
-        </datafield>
-        <datafield tag="971" ind1="5" ind2=" ">
-            <subfield code="a">Universität Linz</subfield>
-            <subfield code="b">Technisch-Naturwissenschaftliche Fakultät</subfield>
-            <subfield code="c">Institut für Symbolisches Rechnen (RISC)</subfield>
-            <subfield code="0">ioo:UL:TN:SR</subfield>
-        </datafield>
-        <datafield tag="971" ind1="9" ind2=" ">
-            <subfield code="a">telescoping / difference rings / reduced denominators / nested sums</subfield>
-        </datafield>
-    </record>
-    <record>
-        <leader>02401nam#a2200385#c#4500</leader>
-        <controlfield tag="001">997090928303340</controlfield>
-        <controlfield tag="005">20230209151052.0</controlfield>
-        <controlfield tag="007">cr#|||||||||||</controlfield>
-        <controlfield tag="008">230209s2022####||||||||o|||||||||||eng|c</controlfield>
-        <controlfield tag="009">AC16767329</controlfield>
-        <datafield tag="024" ind1="7" ind2=" ">
-            <subfield code="a">10.35011/risc.22-18</subfield>
-            <subfield code="2">doi</subfield>
-        </datafield>
-        <datafield tag="024" ind1="7" ind2=" ">
-            <subfield code="a">urn:nbn:at:at-ubl:3-17107</subfield>
-            <subfield code="2">urn</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(AT-OBV)AC16767329</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(VLID)8400115</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(DE-599)OBVAC16767329</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(EXLNZ-43ACC_NETWORK)99147185646703331</subfield>
-        </datafield>
-        <datafield tag="040" ind1=" " ind2=" ">
-            <subfield code="a">AT-UBL</subfield>
-            <subfield code="b">ger</subfield>
-            <subfield code="d">AT-UBL</subfield>
-        </datafield>
-        <datafield tag="041" ind1=" " ind2=" ">
-            <subfield code="a">eng</subfield>
-        </datafield>
-        <datafield tag="044" ind1=" " ind2=" ">
-            <subfield code="c">XA-AT</subfield>
-        </datafield>
-        <datafield tag="100" ind1="1" ind2=" ">
-            <subfield code="a">Smoot, Nicolas Allen</subfield>
-            <subfield code="4">aut</subfield>
-        </datafield>
-        <datafield tag="245" ind1="1" ind2="0">
-            <subfield code="a">Divisibility arising from addition: the application of modular functions to infinite partition congruence families</subfield>
-            <subfield code="b">RISC Report Series, 22-18</subfield>
-        </datafield>
-        <datafield tag="264" ind1=" " ind2="1">
-            <subfield code="a">Linz</subfield>
-            <subfield code="b">Research Institute for Symbolic Computation (RISC), Johannes Kepler University Linz</subfield>
-            <subfield code="c">2022</subfield>
-        </datafield>
-        <datafield tag="300" ind1=" " ind2=" ">
-            <subfield code="a">1 Online-Ressource (17 Seiten)</subfield>
-        </datafield>
-        <datafield tag="336" ind1=" " ind2=" ">
-            <subfield code="b">txt</subfield>
-        </datafield>
-        <datafield tag="337" ind1=" " ind2=" ">
-            <subfield code="b">c</subfield>
-        </datafield>
-        <datafield tag="338" ind1=" " ind2=" ">
-            <subfield code="b">cr</subfield>
-        </datafield>
-        <datafield tag="347" ind1=" " ind2=" ">
-            <subfield code="a">Textdatei</subfield>
-            <subfield code="b">PDF</subfield>
-        </datafield>
-        <datafield tag="490" ind1="0" ind2=" ">
-            <subfield code="a">RISC Report Series</subfield>
-            <subfield code="v">22-18</subfield>
-        </datafield>
-        <datafield tag="506" ind1="0" ind2=" ">
-            <subfield code="f">Unrestricted online access</subfield>
-            <subfield code="2">star</subfield>
-        </datafield>
-        <datafield tag="520" ind1=" " ind2=" ">
-            <subfield code="a">eng: The theory of partition congruences has been a fascinating and difficult subject for over a century now. In attempting to prove a given congruence family, multiple possible complications include the genus of the underlying modular curve, representation difficulties of the associated sequences of modular functions, and difficulties regarding the piecewise $ell$-adic convergence of elements of the associated space of modular functions. However, our knowledge of the subject has developed substantially and continues to develop. In this very brief survey, we will discuss the utility of modular functions in proving partition congruences, both theoretical and computational, and many of the problems in the subject that are yet to be overcome.</subfield>
-        </datafield>
-        <datafield tag="540" ind1=" " ind2=" ">
-            <subfield code="f">CC BY 4.0</subfield>
-            <subfield code="u">https://creativecommons.org/licenses/by/4.0/deed.de</subfield>
-            <subfield code="2">cc</subfield>
-        </datafield>
-        <datafield tag="856" ind1="4" ind2="0">
-            <subfield code="m">V:AT-OBV;B:AT-UBL</subfield>
-            <subfield code="o">OBV-EDOC-VL</subfield>
-            <subfield code="q">text/html</subfield>
-            <subfield code="u">https://resolver.obvsg.at/urn:nbn:at:at-ubl:3-17107</subfield>
-            <subfield code="x">UBL</subfield>
-            <subfield code="z">kostenfrei</subfield>
-            <subfield code="3">Volltext</subfield>
-        </datafield>
-        <datafield tag="970" ind1="2" ind2=" ">
-            <subfield code="d">OA-MONOGRAPH</subfield>
-        </datafield>
-        <datafield tag="970" ind1="9" ind2=" ">
-            <subfield code="m">V:AT-OBV;B:AT-UBL</subfield>
-            <subfield code="q">application/pdf</subfield>
-            <subfield code="u">http://media.obvsg.at/AC16767329-2001</subfield>
-            <subfield code="x">UBL</subfield>
-            <subfield code="z">kostenfrei</subfield>
-            <subfield code="3">Volltext</subfield>
-        </datafield>
-        <datafield tag="971" ind1="5" ind2=" ">
-            <subfield code="a">Universität Linz</subfield>
-            <subfield code="b">Technisch-Naturwissenschaftliche Fakultät</subfield>
-            <subfield code="c">Institut für Symbolisches Rechnen (RISC)</subfield>
-            <subfield code="0">ioo:UL:TN:SR</subfield>
-        </datafield>
-        <datafield tag="971" ind1="9" ind2=" ">
-            <subfield code="a">Partition congruences / modular functions / plane partitions / partition analysis / modular curve / Riemann surface</subfield>
-        </datafield>
-    </record>
-    <record>
-        <leader>01940nam#a2200397#c#4500</leader>
-        <controlfield tag="001">997090928403340</controlfield>
-        <controlfield tag="005">20230209151052.0</controlfield>
-        <controlfield tag="007">cr#|||||||||||</controlfield>
-        <controlfield tag="008">230209s2023####||||||||o|||||||||||eng|c</controlfield>
-        <controlfield tag="009">AC16767330</controlfield>
-        <datafield tag="024" ind1="7" ind2=" ">
-            <subfield code="a">10.35011/risc.23-02</subfield>
-            <subfield code="2">doi</subfield>
-        </datafield>
-        <datafield tag="024" ind1="7" ind2=" ">
-            <subfield code="a">urn:nbn:at:at-ubl:3-17110</subfield>
-            <subfield code="2">urn</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(AT-OBV)AC16767330</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(VLID)8400120</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(DE-599)OBVAC16767330</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-            <subfield code="a">(EXLNZ-43ACC_NETWORK)99147185747603331</subfield>
-        </datafield>
-        <datafield tag="040" ind1=" " ind2=" ">
-            <subfield code="a">AT-UBL</subfield>
-            <subfield code="b">ger</subfield>
-            <subfield code="d">AT-UBL</subfield>
-        </datafield>
-        <datafield tag="041" ind1=" " ind2=" ">
-            <subfield code="a">eng</subfield>
-        </datafield>
-        <datafield tag="044" ind1=" " ind2=" ">
-            <subfield code="c">XA-AT</subfield>
-        </datafield>
-        <datafield tag="100" ind1="1" ind2=" ">
-            <subfield code="a">Dominici, Diego</subfield>
-            <subfield code="4">aut</subfield>
-        </datafield>
-        <datafield tag="245" ind1="1" ind2="0">
-            <subfield code="a">Linear functionals and Delta-coherent pairs of the second kind</subfield>
-            <subfield code="b">RISC Report Series, 23-02</subfield>
-        </datafield>
-        <datafield tag="264" ind1=" " ind2="1">
-            <subfield code="a">Linz</subfield>
-            <subfield code="b">Research Institute for Symbolic Computation (RISC), Johannes Kepler University Linz</subfield>
-            <subfield code="c">2023</subfield>
-        </datafield>
-        <datafield tag="300" ind1=" " ind2=" ">
-            <subfield code="a">1 Online-Ressource (24 Seiten)</subfield>
-        </datafield>
-        <datafield tag="336" ind1=" " ind2=" ">
-            <subfield code="b">txt</subfield>
-        </datafield>
-        <datafield tag="337" ind1=" " ind2=" ">
-            <subfield code="b">c</subfield>
-        </datafield>
-        <datafield tag="338" ind1=" " ind2=" ">
-            <subfield code="b">cr</subfield>
-        </datafield>
-        <datafield tag="347" ind1=" " ind2=" ">
-            <subfield code="a">Textdatei</subfield>
-            <subfield code="b">PDF</subfield>
-        </datafield>
-        <datafield tag="490" ind1="0" ind2=" ">
-            <subfield code="a">RISC Report Series</subfield>
-            <subfield code="v">23-02</subfield>
-        </datafield>
-        <datafield tag="506" ind1="0" ind2=" ">
-            <subfield code="f">Unrestricted online access</subfield>
-            <subfield code="2">star</subfield>
-        </datafield>
-        <datafield tag="520" ind1=" " ind2=" ">
-            <subfield code="a">eng: We classify all the emph{$Delta$-}coherent pairs of measures of the second kind on the real line. We obtain $5$ cases, corresponding to all the families of discrete semiclassical orthogonal polynomials of class $sleq1.$</subfield>
-        </datafield>
-        <datafield tag="540" ind1=" " ind2=" ">
-            <subfield code="f">CC BY 4.0</subfield>
-            <subfield code="u">https://creativecommons.org/licenses/by/4.0/deed.de</subfield>
-            <subfield code="2">cc</subfield>
-        </datafield>
-        <datafield tag="700" ind1="1" ind2=" ">
-            <subfield code="a">Marcellan, Francisco</subfield>
-            <subfield code="4">aut</subfield>
-        </datafield>
-        <datafield tag="856" ind1="4" ind2="0">
-            <subfield code="m">V:AT-OBV;B:AT-UBL</subfield>
-            <subfield code="o">OBV-EDOC-VL</subfield>
-            <subfield code="q">text/html</subfield>
-            <subfield code="u">https://resolver.obvsg.at/urn:nbn:at:at-ubl:3-17110</subfield>
-            <subfield code="x">UBL</subfield>
-            <subfield code="z">kostenfrei</subfield>
-            <subfield code="3">Volltext</subfield>
-        </datafield>
-        <datafield tag="970" ind1="2" ind2=" ">
-            <subfield code="d">OA-MONOGRAPH</subfield>
-        </datafield>
-        <datafield tag="970" ind1="9" ind2=" ">
-            <subfield code="m">V:AT-OBV;B:AT-UBL</subfield>
-            <subfield code="q">application/pdf</subfield>
-            <subfield code="u">http://media.obvsg.at/AC16767330-2001</subfield>
-            <subfield code="x">UBL</subfield>
-            <subfield code="z">kostenfrei</subfield>
-            <subfield code="3">Volltext</subfield>
-        </datafield>
-        <datafield tag="971" ind1="5" ind2=" ">
-            <subfield code="a">Universität Linz</subfield>
-            <subfield code="b">Technisch-Naturwissenschaftliche Fakultät</subfield>
-            <subfield code="c">Institut für Symbolisches Rechnen (RISC)</subfield>
-            <subfield code="0">ioo:UL:TN:SR</subfield>
-        </datafield>
-        <datafield tag="971" ind1="9" ind2=" ">
-            <subfield code="a">Discrete orthogonal polynomials / discrete semiclassical functionals / discrete Sobolev inner products / coherent pairs of discrete measures / coherent pairs of second kind for discrete measures</subfield>
         </datafield>
     </record>
 </collection>
