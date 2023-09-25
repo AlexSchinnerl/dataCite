@@ -79,6 +79,10 @@ def helper_create_creator(record, author, mainElement):
         else:
             textMsg = "Can not split '{}' no givenName and no familyName created".format(author.find("subfield[@code='a']").text)
             write_log(record, textMsg)
+    
+    if author.find("subfield[@code='9']") != None:
+        nameIdentifier = ET.SubElement(creator, "nameIdentifier")
+        nameIdentifier.text = author.find("subfield[@code='9']").text
 
 def create_creator(output, record):
     '''
