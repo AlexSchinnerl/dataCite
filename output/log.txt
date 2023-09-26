@@ -1,0 +1,13 @@
+AC16930464 - Author 'Michal Konecný' does not contain ','
+AC16930464 - Author 'Michal Ruschak' does not contain ','
+AC16930464 - Author 'Yaroslava Kostiuk' does not contain ','
+AC16930435 - Author 'Sturm Nadine' does not contain ','
+AC16930442 - Author 'Marek' does not contain ','
+AC16930442 - Can not split 'Marek' no givenName and no familyName created
+AC16930442 - Author 'Luboš' does not contain ','
+AC16930442 - Can not split 'Luboš' no givenName and no familyName created
+AC16930471 - Author 'Hyden Patrick' does not contain ','
+AC16930453 - Author 'Nedomova' does not contain ','
+AC16930453 - Can not split 'Nedomova' no givenName and no familyName created
+AC16930453 - Author 'Lea' does not contain ','
+AC16930453 - Can not split 'Lea' no givenName and no familyName created

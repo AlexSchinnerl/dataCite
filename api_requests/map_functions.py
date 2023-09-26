@@ -79,6 +79,11 @@ def helper_create_creator(record, author, mainElement):
         else:
             textMsg = "Can not split '{}' no givenName and no familyName created".format(author.find("subfield[@code='a']").text)
             write_log(record, textMsg)
+    
+    if author.find("subfield[@code='9']") != None:
+        nameIdentifier = ET.SubElement(creator, "nameIdentifier")
+        orcidNumPart = author.find("subfield[@code='9']").text.split(")")[1]
+        nameIdentifier.text = f"https://orcid.org/{orcidNumPart}"
 
 def create_creator(output, record):
     '''
