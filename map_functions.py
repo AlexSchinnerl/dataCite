@@ -82,7 +82,8 @@ def helper_create_creator(record, author, mainElement):
     
     if author.find("subfield[@code='9']") != None:
         nameIdentifier = ET.SubElement(creator, "nameIdentifier")
-        nameIdentifier.text = author.find("subfield[@code='9']").text
+        orcidNumPart = author.find("subfield[@code='9']").text.split(")")[1]
+        nameIdentifier.text = f"https://orcid.org/{orcidNumPart}"
 
 def create_creator(output, record):
     '''
