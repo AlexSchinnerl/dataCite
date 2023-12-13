@@ -1,8 +1,9 @@
 import xml.etree.ElementTree as ET
 import re
-import requests
-import keyring
+# import requests
+# import keyring
 import os
+import dataLoader
 import map_functions
 from testingRecord import check_mandatory_fields
 
@@ -13,20 +14,6 @@ def clear_directory(directory):
     filelist = [file for file in os.listdir(directory) if file.endswith(".xml")]
     for f in filelist:
         os.remove(os.path.join(directory, f))
-
-def loader(acNr):
-    """
-    Takes an acNr and builds an api request. Then gives the response as xml and also saves the xml in a file (for later checkup)
-    """
-    key = keyring.get_password("alma_api", "alx_prod").rstrip()
-    base = "https://api-eu.hosted.exlibrisgroup.com"
-    url = f"{base}/almaws/v1/bibs?other_system_id=(AT-OBV){acNr}&apikey={key}"
-    response = requests.get(url)
-    root = ET.fromstring(response.content)
-    # save response for checking
-    with open(f"response_files/response_{acNr}.xml", "w", encoding="UTF-8") as f:
-        f.write(response.text)
-    return root
 
 def create_DCxml(record):
     '''
@@ -68,15 +55,13 @@ def main():
     '''
     Loads the input xml file (Alma export), checks if mandatory fields are present and starts for each record in collection the create_DCxml function.
     '''
-    # change cwd to api requests
-    os.chdir("api_requests")
-    # print(os.getcwd())
     # clear folders
     dir_list = ["response_files", "output"] # list of folders to clear before program starts
     for directory in dir_list:
         clear_directory(directory)
     #clear log file
     open("output/log.txt", "w").close()
+
     # Load Alma xml
     ## open input file and get acNumbers
     with open("input.txt", "r") as i:
@@ -85,7 +70,7 @@ def main():
     ## use loader to get xml root
     counter = 0
     for number in acNumbers:
-        root = loader(number)
+        root = dataLoader.loader(number)
         # go through all records    
         record = root.find("bib").find("record")
         check_mandatory_fields(record)
