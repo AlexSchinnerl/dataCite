@@ -1,4 +1,3 @@
 __pycache__/
 output/*.xml
-api_requests/output/*.xml
-api_requests/response_files/*.xml
+response_files/*.xml
