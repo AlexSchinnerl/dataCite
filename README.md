@@ -99,7 +99,11 @@ The XML files from the API should look like this:
 
 ### main
 
-Contains the `main` method, along with the helper functions: `clear_directory`, `loader` and `create_DCxml`. For each record the Alma XML is loaded and a DataCite compatible XML file is created and saved in the output folder.
+Contains the `main` method, along with the helper functions: `clear_directory` and `create_DCxml`. For each record the Alma XML is loaded and a DataCite compatible XML file is created and saved in the output folder.
+
+### dataLoader
+
+A simple function for accessing the ALMA API to get the user Data. The response is stored as `response_{AC Number}.xml`
 
 ### map_functions
 

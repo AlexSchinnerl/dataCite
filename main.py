@@ -1,7 +1,5 @@
 import xml.etree.ElementTree as ET
 import re
-# import requests
-# import keyring
 import os
 import dataLoader
 import map_functions
